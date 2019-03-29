@@ -1,0 +1,12 @@
+.footer {
+    opacity: 1; // Leave this as 1
+    background-color: rgba(0,0,0,0.6);
+    
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+     
+  }
