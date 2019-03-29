@@ -14,39 +14,39 @@
 </head>
 <body>
 	<!-- Header -->
-	<?php include 'templetes/header.php' ?>
+	<?php include 'templates/header.php' ?>
 
 	<main role="main">
 		
 		<!-- Carousel -->
-		<?php include 'templetes/carousel.php' ?>
+		<?php include 'templates/carousel.php' ?>
 
 
 	  	<div class="container marketing">
 	  		<!-- Contact Us -->
-	  		<?php include 'templetes/rowContactUs.php' ?>
+	  		<?php include 'templates/rowContactUs.php' ?>
 
 	  		<hr class="featurette-divider">
 
 	  		<!-- Package row (right) -->
-	  		<?php include 'templetes/rowPackageRight.php' ?>
+	  		<?php include 'templates/rowPackageRight.php' ?>
 
 	  		<hr class="featurette-divider">
 
 	  		<!-- Package row (left) -->
-	  		<?php include 'templetes/rowPackageLeft.php' ?>
+	  		<?php include 'templates/rowPackageLeft.php' ?>
 	  		
 	  		<hr class="featurette-divider">
 
 	  		<!-- Package row (right) -->
-	  		<?php include 'templetes/rowPackageRight.php' ?>
+	  		<?php include 'templates/rowPackageRight.php' ?>
 
 	  		<hr class="featurette-divider">
 	  	</div>
 
 
   	<!-- FOOTER -->
-  	<?php include 'templetes/footer.php' ?>
+  	<?php include 'templates/footer.php' ?>
   </main>
 
   <!-- Bootstrap JS -->
