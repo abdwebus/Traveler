@@ -33,9 +33,9 @@
 		</div>
 		<div class="menu">
 			<ul>
-				<li><a href="#">HOME</a></li>
-				<li><a href="#">DESTINATIONS</a></li>
-				<li><a href="#">ABOUT</a></li>
+				<li><a href="index.php">HOME</a></li>
+				<li><a href="destinations.php">DESTINATIONS</a></li>
+				<li><a href="contact.php">CONTACT</a></li>
 				<li><a href="#">REGISTER</a></li>
 				<li><a href="#">LOGIN</a></li>
 			</ul>
