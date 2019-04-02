@@ -1,4 +1,4 @@
-<header>
+<!-- <header>
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 		<a class="navbar-brand" href="#">Carousel</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,6 +20,25 @@
 				<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
 				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 			</form>
+		</div>
+	</nav>
+</header> -->
+<header>
+	<nav class="fixed-top">
+		<div class="menu-icon">
+			<i class="fa fa-bars fa-2x"></i>
+		</div>
+		<div class="logo">
+			TRAVELER
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">DESTINATIONS</a></li>
+				<li><a href="#">ABOUT</a></li>
+				<li><a href="#">REGISTER</a></li>
+				<li><a href="#">LOGIN</a></li>
+			</ul>
 		</div>
 	</nav>
 </header>
