@@ -13,6 +13,11 @@
 	margin-top: 80px;
 }
 
+.container{
+	text-align: center;
+	margin-top: 40px;
+}
+
 .footer-distributed .footer-left,
 .footer-distributed .footer-center,
 .footer-distributed .footer-right{
@@ -168,7 +173,9 @@
 		margin-left: 0;
 	}
 
+	
 }
+
 
 
 
