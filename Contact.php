@@ -8,55 +8,37 @@
 	<!-- Custom CSS -->
 	<link rel="stylesheet" type="text/css" href="css/carousel.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/login.css">
-	<link rel="stylesheet" type="text/css" href="css/ariel.css">
-
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 	<!-- Header -->
 	<?php include 'templates/header.php' ?>
 
-	<main role="main">
+	<main>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
 
-		<!-- Login -->
-		<?php include 'login.php' ?>
-		
-		<!-- Carousel -->
-		<?php include 'templates/carousel.php' ?>
-
-
-	  	<div class="container marketing">
+	<div class="container marketing">
 	  		<!-- Contact Us -->
 	  		<?php include 'templates/rowContactUs.php' ?>
-
-	  		<hr class="featurette-divider">
-
-	  		<!-- Package row (right) -->
-	  		<?php include 'templates/rowPackageRight.php' ?>
-
-	  		<hr class="featurette-divider">
-
-	  		<!-- Package row (left) -->
-	  		<?php include 'templates/rowPackageLeft.php' ?>
-	  		
-	  		<hr class="featurette-divider">
-
-	  		<!-- Package row (right) -->
-	  		<?php include 'templates/rowPackageRight.php' ?>
-
-	  		<hr class="featurette-divider">
-	  	</div>
-
-
-  	<!-- FOOTER -->
+			<hr class="featurette-divider">
+		  </div>
+		  
+		 
+		  <!-- FOOTER -->
   	<?php include 'templates/footer.php' ?>
   </main>
-
-  <script type="text/javascript" src="js/login.js"></script>
 
   <!-- Bootstrap JS -->
   <script src="js/app.js"></script>

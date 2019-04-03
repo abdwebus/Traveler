@@ -28,7 +28,7 @@
 
 
 	
-	<link rel="stylesheet" href="css/forFooter.css">
+	
 	<link rel="stylesheet" href="css/styleliam.css">
 	
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -40,7 +40,10 @@
 
 			<div class="footer-left">
 
-				<h3>Company<span>logo</span></h3>
+				
+				<div>
+				<img height="95" width="95" src="images/logo_transparent.png">
+				</div>
 
 				<p class="footer-links">
 					<a href="#">Home</a>
@@ -56,14 +59,16 @@
 					<a href="#">Contact</a>
 				</p>
 
-				<p class="footer-company-name">The Traveler &copy; 2019</p>
+				<p class="footer-company-name">The Traveler &copy; 2019-2020</p>
 			</div>
 
 			<div class="footer-center">
 
 				<div>
+
+				
 					<i class="fa fa-map-marker"></i>
-					<p><span>102 Jasper ave NW</span> Downtown Edmonton Alberta, Canada</p>
+					<p><span>10230 Jasper Ave, Edmonton, AB T5J 4P6</span> Downtown Edmonton Alberta, Canada</p>
 				</div>
 
 				<div>
@@ -87,7 +92,7 @@
 
 				<div class="footer-icons">
 
-					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
 					<a href="#"><i class="fa fa-twitter"></i></a>
 					<a href="#"><i class="fa fa-linkedin"></i></a>
 					<a href="#"><i class="fa fa-github"></i></a>
