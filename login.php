@@ -1,9 +1,9 @@
 <!-- Author: Abdulwahab Alansari -->
-<div id="modal-wrapper" class="modal">
+<div id="modal-wrapper" class="modal centerText">
 	<form class="form-content form-signin animate" action="" method="">
 		<div class="imgcontainer">
 			<span id="loginCloseButton" class="close" title="Close PopUp">&times;</span>
-			<img class="mb-4" src="images/Logo.png" alt="" width="150" height="109">
+			<img class="mb-4" src="images/Logo.png" alt="" width="75" height="54">
 		</div>
 		<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 		<label for="inputEmail" class="sr-only">Email address</label>
@@ -19,4 +19,3 @@
 		<p class="mt-5 mb-3 text-muted">© 2019-2020</p>
 	</form>
 </div>
-<script type="text/javascript" src="js/login.js"></script>

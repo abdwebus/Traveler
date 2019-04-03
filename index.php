@@ -24,6 +24,7 @@
 
 		<!-- Login -->
 		<?php include 'login.php' ?>
+		<?php include 'signup.php' ?>
 		
 		<!-- Carousel -->
 		<?php include 'templates/carousel.php' ?>
