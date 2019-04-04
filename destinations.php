@@ -11,6 +11,7 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
 </head>
 <body>
 	<!-- Navbar -->
@@ -18,86 +19,43 @@
 
 	<!-- Subheader -->
 	<?php include 'templates/subheader.php' ?>
-	
-	<div class="row cardpadding">
-    <div class="col-lg-4 col-sm-6 mb-4">
-      <div class="card h-100">
-        <a href="#"><img class="card-img-top" src="https://bit.ly/2WKeypn" alt=""></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="#">Project One</a>
-          </h4>
-		  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
-		  <a href="#" class="btn btn-primary">Add to Cart</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-sm-6 mb-4">
-      <div class="card h-100">
-        <a href="#"><img class="card-img-top" src="https://bit.ly/2WKeypn" alt=""></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="#">Project Two</a>
-          </h4>
-		  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-		  <a href="#" class="btn btn-primary">Add to Cart</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-sm-6 mb-4">
-      <div class="card h-100">
-        <a href="#"><img class="card-img-top" src="https://bit.ly/2WKeypn" alt=""></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="#">Project Three</a>
-          </h4>
-		  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
-		  <a href="#" class="btn btn-primary">Add to Cart</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-sm-6 mb-4">
-      <div class="card h-100">
-        <a href="#"><img class="card-img-top" src="https://bit.ly/2WKeypn" alt=""></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="#">Project Four</a>
-          </h4>
-		  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-		  <a href="#" class="btn btn-primary">Add to Cart</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-sm-6 mb-4">
-      <div class="card h-100">
-        <a href="#"><img class="card-img-top" src="https://bit.ly/2WKeypn" alt=""></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="#">Project Five</a>
-          </h4>
-		  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-		  <a href="#" class="btn btn-primary">Add to Cart</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-sm-6 mb-4">
-      <div class="card h-100">
-        <a href="#"><img class="card-img-top" src="https://bit.ly/2WKeypn" alt=""></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="#">Project Six</a>
-          </h4>
-		  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
-		  <a href="#" class="btn btn-primary">Add to Cart</a>
-		</div>
-      </div>
-    </div>
-  </div>
 
+  <?php
+  include_once("models/connect.php");
+  $date = date("Y-m-d H:i:s");
+  $query = "SELECT * FROM `packages` WHERE `PkgEndDate` > '$date'";
+  $results = mysqli_query($connect, $query) or die("database error:". mysqli_error($connect));
+  ?>
+
+  <div class="row card-deck cardpadding">
+
+  <?php
+  while($record = mysqli_fetch_assoc($results) ) {
+  ?>
+    <div class="col-lg-4 col-sm-6 mb-4">
+      <div class="card">
+        <a href="#"><img class="card-img-top" src="https://bit.ly/2WKeypn" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title"><?php echo $record['PkgName']; ?></h5>
+          <p class="card-text"><?php echo $record['PkgDesc']; ?></p>
+        </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><?php echo $record['PkgStartDate']; ?></li>
+            <li class="list-group-item"><?php echo $record['PkgEndDate']; ?></li>
+            <li class="list-group-item"><?php echo $record['PkgBasePrice']; ?></li>
+          </ul>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+   
+  <?php 
+  } 
+  ?>
+  </div>
 
   	<!-- FOOTER -->
   	<?php include 'templates/footer.php' ?>
-  </main>
+
 
   <!-- Bootstrap JS -->
   <script src="js/app.js"></script>
