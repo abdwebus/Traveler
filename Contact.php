@@ -20,47 +20,56 @@
 <body>
 	<!-- Header -->
 	<?php include 'templates/header.php' ?>
-	<?php include 'templates/subheader.php' ?>
-
-
-	<main role="main">
-		<div class="container marketing">
+		<?php include 'templates/subheader.php' ?>
+	
+	
+	
+	<div>
+			<?php
+ 	 			include_once("templates/connect.php");
+ 	 		$query = "SELECT * FROM agencies";
+ 	 $results = mysqli_query($connect, $query) or die("database error:". mysqli_error($connect));
+  	?> 
+	</div>
+	
+	
+	
+	
+		<main role="main">
+			<main backgroundcolor="red">
+		  <div class="container marketing">
 			<div class="row">
-				<!-- South Edmonton -->
-				<div class="col-lg-4">
-					<img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/south.jpg">
-					<h2>South Edmonton</h2>
-						Office Tel: +7801234567 <br>
-						Address: 10230 Jasper Ave, Edmonton, AB <br>
-						Email: traveler@agency <br>
-						Fax: +7802341234 <br>
-				</div>
+				<?php
+				while( $record = mysqli_fetch_assoc($results) ) {
+				?> 
+			
+		
+					<div class="col-lg-4">
+						<img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/north.jpg">
+					
+							<h2><?php echo $record['AgncyCity']; ?></h2>
+								Phone: <?php echo $record['AgncyPhone']; ?><br>
+									Address: <?php echo $record['AgncyAddress']; ?><br>
+										Fax: <?php echo $record['AgncyFax']; ?> <br>
+			
+											</div>
 
-				<!-- Downtown Edmonton -->
-				<div class="col-lg-4">
-					<img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/downtown.jpg">
-					<h2>Downtown Edmonton</h2>
-					Office Tel: +7801234567 <br>
-					Address: 10230 Jasper Ave, Edmonton, AB <br>
-					Email: traveler@agency <br>
-					Fax: +7802341234 <br>
-				</div>
+							
+						
 
-				<!-- North Edmonton -->
-				<div class="col-lg-4">
-					<img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/north.jpg">
-					<h2>North Edmonton</h2>
-					Office Tel: +7801234567 <br>
-					Address: 10230 Jasper Ave, Edmonton, AB <br>
-					Email: traveler@agency <br>
-					Fax: +7802341234 <br>
-				</div>
-			</div> <!-- Row end -->
-		</div> <!-- Container end -->
+
+			
+						<?php 
+					} 
+				?>
+
+			</div>
+		</div> 
+	</div> <!-- Container end -->
 
 		<!-- FOOTER -->
-		<?php include 'templates/footer.php' ?>
-  	</main>
+				<?php include 'templates/footer.php' ?>
+  					</main>
   
 
 	<!-- Bootstrap JS -->
