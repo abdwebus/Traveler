@@ -1,6 +1,6 @@
 <!-- Author: Abdulwahab Alansari -->
 <div id="signupModal-wrapper" class="modal">
-	<form id="regForm" class="form-content form-signup animate" action="" method="">
+	<form id="regForm" class="form-content form-signup animate" action="model/register.php" method="POST">
 		<div class="imgcontainer centerText">
 			<span id="signupCloseButton" class="close" title="Close PopUp">&times;</span>
 			<img class="mb-4" src="images/Logo.png" alt="" width="75" height="54">
@@ -12,11 +12,11 @@
 			</div>
 			<div class="form-group">
 				<label for="InputEmail1" class="sr-only">Email address</label>
-				<input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+				<input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
 				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 			</div>
 			<div class="form-group">
-				<input type="password" class="form-control" id="signupPassword" placeholder="Password">
+				<input type="password" class="form-control" id="signupPassword" placeholder="Password" name="password">
 				<input type="password" class="form-control" id="signupConfirmPassword" placeholder="Confirm password">
 			</div>
 			<div class="checkbox mb-3">
@@ -31,20 +31,20 @@
 			<div class="form-row form-group">
 				<div class="col">
 					<label for="firstNameInput" class="sr-only">First name</label>
-					<input type="text" class="form-control" id="firstNameInput" placeholder="First name">
+					<input type="text" class="form-control" id="firstNameInput" placeholder="First name" name="firstName">
 				</div>
 				<div class="col">
 					<label for="lastNameInput" class="sr-only">Last name</label>
-					<input type="text" class="form-control" id="lastNameInput" placeholder="Last name">
+					<input type="text" class="form-control" id="lastNameInput" placeholder="Last name" name="lastName">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="businessPhoneInput" class="sr-only">Business phone number</label>
-				<input type="tel" class="form-control" id="businessPhoneInput" placeholder="Business phone number">
+				<input type="tel" class="form-control" id="businessPhoneInput" placeholder="Business phone number" name="businessPhone">
 			</div>
 			<div class="form-group">
 				<label for="homePhoneInput" class="sr-only">Business phone number</label>
-				<input type="tel" class="form-control" id="homePhoneInput" placeholder="Home phone number">
+				<input type="tel" class="form-control" id="homePhoneInput" placeholder="Home phone number" name="homePhone">
 			</div>
 		</div>
 
@@ -54,20 +54,20 @@
 			</div>
 			<div class="form-group">
 				<label for="inputAddress" class="sr-only">Address</label>
-				<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+				<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address1">
 			</div>
 			<div class="form-group">
 				<label for="inputAddress2" class="sr-only">Address 2</label>
-				<input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+				<input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="address2">
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-5">
 					<label for="inputCity" class="sr-only">City</label>
-					<input type="text" class="form-control" id="inputCity" placeholder="City">
+					<input type="text" class="form-control" id="inputCity" placeholder="City" name="city">
 				</div>
 				<div class="form-group col-md-4">
 					<label for="inputState" class="sr-only">Province</label>
-					<select id="inputState" class="form-control">
+					<select id="inputState" class="form-control" name="province">
 						<option selected>Province...</option>
 						<option>Alberta</option>
 						<option>British Columbia</option>
@@ -83,7 +83,7 @@
 				</div>
 				<div class="form-group col-md-3" class="sr-only">
 					<label for="inputZip" class="sr-only">Zip</label>
-					<input type="text" class="form-control" id="inputZip" placeholder="Zip">
+					<input type="text" class="form-control" id="inputZip" placeholder="Zip" name="zip">
 				</div>
 			</div>
 		</div>

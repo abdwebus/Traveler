@@ -21,15 +21,16 @@
 	<?php include 'templates/subheader.php' ?>
 
   <?php
-  include_once("templates/connect.php");
-  $query = "SELECT * FROM packages";
+  include_once("models/connect.php");
+  $date = date("Y-m-d H:i:s");
+  $query = "SELECT * FROM `packages` WHERE `PkgEndDate` > '$date'";
   $results = mysqli_query($connect, $query) or die("database error:". mysqli_error($connect));
   ?>
 
   <div class="row card-deck cardpadding">
 
   <?php
-  while( $record = mysqli_fetch_assoc($results) ) {
+  while($record = mysqli_fetch_assoc($results) ) {
   ?>
     <div class="col-lg-4 col-sm-6 mb-4">
       <div class="card">
