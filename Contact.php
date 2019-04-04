@@ -31,7 +31,7 @@
 					<img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/south.jpg">
 					<h2>South Edmonton</h2>
 						Office Tel: +7801234567 <br>
-						Address: 10230 Jasper Ave, Edmonton, AB T5J 4P6 <br>
+						Address: 10230 Jasper Ave, Edmonton, AB <br>
 						Email: traveler@agency <br>
 						Fax: +7802341234 <br>
 				</div>
@@ -41,7 +41,7 @@
 					<img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/downtown.jpg">
 					<h2>Downtown Edmonton</h2>
 					Office Tel: +7801234567 <br>
-					Address: 10230 Jasper Ave, Edmonton, AB T5J 4P6 <br>
+					Address: 10230 Jasper Ave, Edmonton, AB <br>
 					Email: traveler@agency <br>
 					Fax: +7802341234 <br>
 				</div>
@@ -51,7 +51,7 @@
 					<img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/north.jpg">
 					<h2>North Edmonton</h2>
 					Office Tel: +7801234567 <br>
-					Address: 10230 Jasper Ave, Edmonton, AB T5J 4P6 <br>
+					Address: 10230 Jasper Ave, Edmonton, AB <br>
 					Email: traveler@agency <br>
 					Fax: +7802341234 <br>
 				</div>
