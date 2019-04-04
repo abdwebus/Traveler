@@ -26,7 +26,7 @@
 	
 	<div>
 			<?php
- 	 			include_once("templates/connect.php");
+ 	 			include_once("models/connect.php");
  	 		$query = "SELECT * FROM agencies";
  	 $results = mysqli_query($connect, $query) or die("database error:". mysqli_error($connect));
   	?> 
@@ -36,7 +36,6 @@
 	
 	
 		<main role="main">
-			<main backgroundcolor="red">
 		  <div class="container marketing">
 			<div class="row">
 				<?php
