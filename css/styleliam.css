@@ -13,10 +13,18 @@
 	margin-top: 80px;
 }
 
-.container{
-	text-align: center;
+.tableagents {
 
+		object-position: center  ;
+		text-align: center;
+}
+
+.container-marketing {
+	table-layout: inherit;
+	text-align: center;
 	margin-top: 40px;
+	
+
 }
 
 .footer-distributed .footer-left,

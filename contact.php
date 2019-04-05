@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/ariel.css">
 	<link rel="stylesheet" type="text/css" href="css/styleliam.css">
+	<link rel="stylesheet" type="text/css" href="css/contact.css">
 
 
 
@@ -46,12 +47,12 @@
 					<div class="col-lg-4">
 						<img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/north.jpg">
 					
-							<h2><?php echo $record['AgncyCity']; ?></h2>
+							<h2><?php echo $record['AgncyCity']; ?> <?php echo $record['AgncyProv']; ?>, <?php echo $record['AgncyCountry']; ?></h2>
 								Phone: <?php echo $record['AgncyPhone']; ?><br>
-									Address: <?php echo $record['AgncyAddress']; ?><br>
-										Fax: <?php echo $record['AgncyFax']; ?> <br>
+								Address: <?php echo $record['AgncyAddress']; ?><br>
+								Fax: <?php echo $record['AgncyFax']; ?> <br>
 			
-											</div>
+							</div>
 
 							
 						
@@ -64,6 +65,11 @@
 
 			</div>
 		</div> 
+					<div class="container">
+						
+					
+			     	</div>
+
 	</div> <!-- Container end -->
 
 		<!-- FOOTER -->
