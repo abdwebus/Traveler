@@ -25,38 +25,38 @@
 			<div class="jumbotron centerDiv">
 				<h1 class="display-4">Travel Package Entry</h1>
 				<hr class="my-4">
-				<form method="POST" action="agents.php" onsubmit="confirmForm()">
+				<form method="POST" action="models/packagesinsert.php">
 					<div class="form-group">
-						<label for="AgtFirstName">Travel Package Image</label>
-						<input type="text" name="AgtFirstName" class="form-control" placeholder="Package Image URL" required onfocus="toggleP('name')" onblur="toggleP('name')">
+						<label for="PkgImgUrl">Travel Package Image</label>
+						<input type="text" name="PkgImgUrl" class="form-control" placeholder="Package Image URL" required onfocus="toggleP('name')" onblur="toggleP('name')">
 						<small class="hide form-text text-muted">Please enter an image URL</small>
 					</div>
 					<div class="form-group">
-						<label for="AgtMiddleInitial">Travel Package Name</label>
-						<input type="text" name="AgtMiddleInitial" class="form-control" placeholder="Package Name" required onfocus="toggleP('email')" onblur="toggleP('email')">
+						<label for="PkgName">Travel Package Name</label>
+						<input type="text" name="PkgName" class="form-control" placeholder="Package Name" required onfocus="toggleP('email')" onblur="toggleP('email')">
 						<small class="hide form-text text-muted">Please enter a package name</small>
 					</div>
 					<div class="form-group">
-						<label for="AgtLastName">Travel Package Description</label>
-						<input type="text" name="AgtLastName" class="form-control" placeholder="Package Description" onfocus="toggleP('phone')" onblur="toggleP('phone')" required>
+						<label for="PkgDesc">Travel Package Description</label>
+						<input type="text" name="PkgDesc" class="form-control" placeholder="Package Description" onfocus="toggleP('phone')" onblur="toggleP('phone')" required>
 						<small class="hide form-text text-muted">Please enter a package description</small>
 					</div>
 					<div class="form-group">
-						<label for="AgtBusPhone">Travel Package Start Date</label>
-						<input type="tel" name="AgtBusPhone" class="form-control" placeholder="YYYY-MM-DD" onfocus="toggleP('postalcode')" onblur="toggleP('postalcode')" required>
+						<label for="PkgStartDate">Travel Package Start Date</label>
+						<input type="text" name="PkgStartDate" class="form-control" placeholder="YYYY-MM-DD" onfocus="toggleP('postalcode')" onblur="toggleP('postalcode')" required>
 						<small class="hide form-text text-muted">Please enter a start date in this format YYYY-MM-DD</small>
 					</div>
 					<div class="form-group">
-						<label for="AgtEmail">Travel Package End Date</label>
-						<input type="email" name="AgtEmail" class="form-control" placeholder="YYYY-MM-DD" onfocus="toggleP('postalcode')" onblur="toggleP('postalcode')" required>
+						<label for="PkgEndDate">Travel Package End Date</label>
+						<input type="text" name="PkgEndDate" class="form-control" placeholder="YYYY-MM-DD" onfocus="toggleP('postalcode')" onblur="toggleP('postalcode')" required>
 						<small class="hide form-text text-muted">Please enter an end date in this format YYYY-MM-DD</small>
 					</div>
 					<div class="form-group">
-						<label for="AgtPosition">Travel Package Price</label>
-						<input type="text" name="AgtPosition" class="form-control" placeholder="1000" onfocus="toggleP('postalcode')" onblur="toggleP('postalcode')" required>
+						<label for="PkgBasePrice">Travel Package Price</label>
+						<input type="text" name="PkgBasePrice" class="form-control" placeholder="1000" onfocus="toggleP('postalcode')" onblur="toggleP('postalcode')" required>
 						<small class="hide form-text text-muted">Please enter your package price</small>
                     </div>
-					<input type="submit" name="submit" class="btn btn-primary btn-lg btn-block">
+					<input type="submit" name="submit" data-rel="back" class="btn btn-primary btn-lg btn-block">
                 </form> 
             </div>
         

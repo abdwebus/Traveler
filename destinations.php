@@ -41,22 +41,21 @@
         </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item"><?php echo $record['PkgStartDate']; ?></li>
-            <li class="list-group-item"><?php echo $record['PkgEndDate']; ?></li>
+            <li id="myelement" class="list-group-item"><?php echo $record['PkgEndDate']; ?></li>
             <li class="list-group-item"><?php echo $record['PkgBasePrice']; ?></li>
           </ul>
           <a href="#" class="btn btn-primary">Add to Cart</a>
-          </div>
         </div>
-   
+      </div>
+    
   <?php 
   } 
   ?>
   </div>
 
   	<!-- FOOTER -->
-  	<?php include 'templates/footer.php' ?>
-
-
+    <?php include 'templates/footer.php' ?>
+  
   <!-- Bootstrap JS -->
   <script src="js/app.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+990DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
