@@ -2,67 +2,88 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Contact us</title>
+	<title>Agents Page</title>
 
 	<!-- Custom CSS -->
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/ariel.css">
-	<link rel="stylesheet" type="text/css" href="css/styleliam.css">
-	<link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" type="text/css" href="css/styleliam.css">
+    
 	
 
-
-
-	<!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
 </head>
 <body>
 	 <Header>
     	<?php include 'templates/header.php' ?>
 		<?php include 'templates/subheader.php' ?>
-	
-	
-			<div>
+        
+        <div>
 			<?php
  	 		include_once("models/connect.php");
- 	 		$query = "SELECT * FROM agencies";
+ 	 		$query = "SELECT * FROM agents";
  	 		$results = mysqli_query($connect, $query) or die("database error:". mysqli_error($connect));
   			?> 
-			</div>
+		</div>
 
 						
 			<?php
 			while( $record = mysqli_fetch_assoc($results) ) {
 			?>  
-
-				<div class="row">
-			    <div class="card" style="width: 18rem;">
-  				<img class="card-img-top" src="https://bit.ly/2D2fE8j" alt="Card image cap">
-  				<div class="card-body">
-    			<h5 class="card-title"><?php echo $record['AgncyCity']; ?> <?php echo $record['AgncyProv']; ?>, <?php echo $record['AgncyCountry']; ?></h5>
-				<p class="card-text">Office Address: <?php echo $record['AgncyAddress']; ?></p>
-				<p class="card-text">Phone: <?php echo $record['AgncyPhone']; ?></p>
-				<p class="card-text">Fax: <?php echo $record['AgncyFax']; ?></p>
-				<a href="agents.php" class="btn btn-primary">Agents</a>
-				<a href="#" class="btn btn-primary">Location</a>
-				
-				  </div>
-  				
-			</div>
-		
 	
-			<?php 
-			} 
-			?>  
-			
-			</div>
-			</div> <!-- Container end -->
+<main>
 
-		<!-- FOOTER -->
-			<?php include 'templates/footer.php' ?>
+
+
+<div style="overflow-x:auto;">
+<div class="table">
+  <table>
+    <tr>
+      <th>Agent Id</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Agency Id</th>
+      <th>Agent Position</th>
+      <th><a href="#" class="btn btn-primary">Business Phone</th>
+      <th><a href="#" class="btn btn-primary">Email address</a></th>
+    </tr>
+    <tr>
+      <td><?php echo $record['AgentId']; ?></td>
+      <td><?php echo $record['AgtFirstName']; ?></td>
+      <td><?php echo $record['AgtLastName']; ?></td>
+      <td><?php echo $record['AgencyId']; ?></td>
+      <td><?php echo $record['AgtPosition']; ?></td>
+      <td><?php echo $record['AgtBusPhone']; ?></td>
+      <td><?php echo $record['AgtEmail']; ?></td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>
+
+
+</div>
+</div>
+</div>
+
+<?php 
+} 
+?> 
+
+
+</div>
+</div>
+</div>
+<!-- FOOTER -->
+<?php include 'templates/footer.php' ?>
 			
 			
 </main>
