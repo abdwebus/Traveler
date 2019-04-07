@@ -34,7 +34,7 @@
   ?>
     <div class="col-lg-4 col-sm-6 mb-4">
       <div class="card">
-        <a href="#"><img class="card-img-top" src="https://bit.ly/2WKeypn" alt=""></a>
+        <a href="#"><img class="card-img-top" src="<?php echo $record['PkgImgUrl']; ?>" alt=""></a>
         <div class="card-body">
           <h5 class="card-title"><?php echo $record['PkgName']; ?></h5>
           <p class="card-text"><?php echo $record['PkgDesc']; ?></p>
@@ -52,6 +52,13 @@
   } 
   ?>
   </div>
+  <?php
+  $record['PkgEndDate'] = strtotime('PkgEndDate');
+  ?>
+
+  <script>
+    var now = new Date($record['PkgEndDate'] * 1000);
+  </script>
 
   	<!-- FOOTER -->
     <?php include 'templates/footer.php' ?>
