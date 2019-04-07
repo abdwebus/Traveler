@@ -1,15 +1,27 @@
+<!-- Author: Abdulwahab Alansari -->
 <?php
-
-include 'dbConnection.php';
-include 'classes.php';
-
-
 if (isset($_POST)){
-	$credentialID = createCredential($connect);
-	createCustomer($_POST, $credentialID, $connect);
+	$valid = validatePost($_POST); 
+	if ($valid != ''){
+		echo $valid;
+		header ("refresh:5; url=../index.php");
+	} else {
+		include 'classes.php';
+
+		// Create DB connection
+		$connect = mysqli_connect('localhost', 'agent', '', 'travelexperts');
+		if (!$connect) {
+			die(mysql_error());
+		}
+		$credentialID = createCredential($connect, $_POST);
+		createCustomer($connect, $_POST, $credentialID);
+		mysqli_close($connect);
+		header('Location: ../index.php');
+		exit;
+	}
 }
 
-function createCustomer($post, $credentialID, $db){
+function createCustomer($db, $post, $credentialID){
 	$AGENTID = 10; //online agent
 	$customer = createCustomerObject($post);
 
@@ -36,8 +48,8 @@ function createCustomer($post, $credentialID, $db){
    	}
 }
 
-function createCredential($db){
-	$user = new User($_POST['email'], $_POST['password']);
+function createCredential($db, $post){
+	$user = new User($post['email'], $post['password']);
 	$email = $user->getEmail();
 	$password = $user->getPassword();
 	$createdDate = $user->getCreatedDate();
@@ -55,21 +67,89 @@ function createCredential($db){
    	}
 }
 
-function createCustomerObject($arr){
+function createCustomerObject($post){
 	$country = 'Canada';
 	$customer = new Customer();
-	$customer->setFirstName($_POST['firstName']);
-	$customer->setLastName($_POST['lastName']);
-	$customer->setBusinessPhone($_POST['businessPhone']);
-	$customer->setHomePhone($_POST['homePhone']);
-	$customer->setAddress($_POST['address2'] . ' - ' . $_POST['address1']);
-	$customer->setCity($_POST['city']);
-	$customer->setProvince($_POST['province']);
-	$customer->setPostal($_POST['zip']);
+	$customer->setFirstName($post['firstName']);
+	$customer->setLastName($post['lastName']);
+	$customer->setBusinessPhone($post['businessPhone']);
+	$customer->setHomePhone($post['homePhone']);
+	$customer->setAddress($post['address2'] . ' - ' . $post['address1']);
+	$customer->setCity($post['city']);
+	$customer->setProvince($post['province']);
+	$customer->setPostal($post['zip']);
 	$customer->setCountry($country);
-	$customer->setEmail($_POST['email']);
+	$customer->setEmail($post['email']);
 	return $customer;
 }
 
+function validatePost($post){
+	$response = '';
+	$response .= validateEmail($post['email']);
+	$response .= validatePassword($post['password'], $post['confirmPassword']);
+	$response .= ($post['firstName'] === '') ? 'First name is required </br>' : '';
+	$response .= ($post['lastName'] === '') ? 'Last name is required </br>' : '';
+	$response .= (!isAlpha($post['firstName'])) ? 'First name is invalid </br>' : '';
+	$response .= (!isAlpha($post['lastName'])) ? 'Last name is invalid </br>' : '';
+	$response .= validateBusinessPhoneNumber($post['businessPhone']);
+	$response .= validateHomePhoneNumber($post['homePhone']);
+	$response .= ($post['address1'] === '' || $post['address2'] === '') ? 'Complete address is required </br>' : '';
+	$response .= ($post['city'] === '') ? 'City is required </br>' : '';
+	$response .= (!isAlpha($post['city'])) ? 'City is invalid </br>' : '';
+	$response .= ($post['province'] === '') ? 'Province is required </br>' : '';
+	$response .= validateZipCode($post['zip']);
+	
+	return $response;
 
+}
+
+function validateEmail($string){
+	if($string == '') {return 'Email is required! </br>';}
+	if(!preg_match("/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/", $string)){
+		return 'Email is invalid </br>';
+	}
+	return '';
+}
+
+function validatePassword($password, $confirmPassword){
+	if($password === '' || $confirmPassword === ''){
+		return 'Password fields are required </br>';
+	}
+
+	if($password != $confirmPassword) {
+		return "Passwords don't match </br>";
+	}
+	return '';
+}
+
+function validateBusinessPhoneNumber($string){
+	if($string == '') {return 'Business Phone number is required </br>';}
+	if(!preg_match("/^\d{10}$/", $string)){
+		return 'Business phone number is invalid </br>';
+	}
+	return '';
+}
+
+function validateHomePhoneNumber($string){
+	if($string == '') {return '';}
+	if(!preg_match("/^\d{10}$/", $string)){
+		return 'Home phone number is invalid </br>';
+	}
+	return '';
+}
+
+function isAlpha($string){
+	if(preg_match("/\d/", $string)){
+		return false;
+	}
+	return true;
+}
+
+function validateZipCode($string){
+	if($string == '') {return 'Zip code is required </br>';}
+	if(!preg_match("/^[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d$/", $string)){
+		return 'Zip code is invalid </br>';
+	}
+	return '';
+}
 ?>

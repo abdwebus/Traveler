@@ -1,5 +1,9 @@
+<!-- Author: Abdulwahab Alansari -->
 <?php 
-
+/*
+* User Class
+*
+*/
 class User {
 	private $userID;
 	private $email;
@@ -9,14 +13,14 @@ class User {
 	private $userType;
 
 	public function __construct($email, $password, $userType = 'customer'){
-		$this->email = $email;
-		$this->password = $password;
+		$this->email = $this->sanitizeString($email);
+		$this->password = $this->hashPassword($this->sanitizeString($password));
 		
 		date_default_timezone_set('UTC');
 		$today = date('Y-m-d');
 		$this->createdDate = $today;
 		$this->modifiedDate = $today;
-		$this->userType = $userType;
+		$this->userType = $this->sanitizeString($userType);
 	}
 
 	//UserID
@@ -97,8 +101,23 @@ class User {
 		$this->modifiedDate = $today;
 
     }
+
+    private function sanitizeString($string){
+        $string = stripslashes($string);
+        return htmlentities($string);
+    }
+
+    private function hashPassword($string){
+        return password_hash($string, PASSWORD_DEFAULT);
+    }
 }
 
+
+
+/*
+* Person Class
+*
+*/
 class Person{
     private $id;
     private $firstName;
@@ -130,7 +149,7 @@ class Person{
     
     public function setFirstName($firstName)
     {
-        $this->firstName = $firstName;
+        $this->firstName = $this->sanitizeString($firstName);
     }
 
    
@@ -142,7 +161,7 @@ class Person{
     
     public function setLastName($lastName)
     {
-        $this->lastName = $lastName;
+        $this->lastName = $this->sanitizeString($lastName);
     }
 
     public function getEmail()
@@ -152,7 +171,7 @@ class Person{
     
     public function setEmail($email)
     {
-        $this->email = $email;
+        $this->email = $this->sanitizeString($email);
     }
 
     public function getBusinessPhone()
@@ -162,7 +181,7 @@ class Person{
 
     public function setBusinessPhone($businessPhone)
     {
-        $this->businessPhone = $businessPhone;
+        $this->businessPhone = $this->sanitizeString($businessPhone);
     }
 
     public function getCredentialID()
@@ -174,8 +193,19 @@ class Person{
     {
         $this->credentialID = $credentialID;
     }
+
+    protected function sanitizeString($string){
+        $string = stripslashes($string);
+        return htmlentities($string);
+    }
 }
 
+
+
+/*
+* Customer Class
+*
+*/
 class Customer extends Person{
     private $address;
     private $city;
@@ -197,7 +227,7 @@ class Customer extends Person{
    
     public function setAddress($address)
     {
-        $this->address = $address;
+        $this->address = $this->sanitizeString($address);
     }
 
    
@@ -208,7 +238,7 @@ class Customer extends Person{
 
     public function setCity($city)
     {
-        $this->city = $city;
+        $this->city = $this->sanitizeString($city);
     }
 
     public function getProvince()
@@ -218,7 +248,7 @@ class Customer extends Person{
 
     public function setProvince($province)
     {
-        $this->province = $province;
+        $this->province = $this->sanitizeString($province);
     }
 
     public function getPostal()
@@ -228,7 +258,7 @@ class Customer extends Person{
 
     public function setPostal($postal)
     {
-        $this->postal = $postal;
+        $this->postal = strtoupper($this->sanitizeString($postal));
     }
 
     public function getCountry()
@@ -238,7 +268,7 @@ class Customer extends Person{
 
     public function setCountry($country)
     {
-        $this->country = $country;
+        $this->country = $this->sanitizeString($country);
     }
 
     public function getHomePhone()
@@ -248,10 +278,15 @@ class Customer extends Person{
 
     public function setHomePhone($homePhone)
     {
-        $this->homePhone = $homePhone;
+        $this->homePhone = $this->sanitizeString($homePhone);
     }
 }
 
+
+/*
+* Agent Class
+*
+*/
 class Agent extends Person{
     private $position;
     private $agencyID;
@@ -269,7 +304,7 @@ class Agent extends Person{
     
     public function setPosition($position)
     {
-        $this->position = $position;
+        $this->position = $this->sanitizeString($position);
     }
 
    

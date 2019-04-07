@@ -1,63 +1,63 @@
 <?php 
 
 	class package{
-		private $packageURL;
-		private $packageName;
-		private $packageDesc;
-		private $packageStartDate;
-		private $packageEndDate;
-		private $packagePrice;
+		private $ImgUrl;
+		private $Name;
+		private $Desc;
+		private $StartDate;
+		private $EndDate;
+		private $Price;
 		public function __construct($packageData){
-			$this->packageURL = $packageData["travelimg"];
-			$this->packageName = $packageData["travelname"];
-			$this->packageDesc = $packageData["traveldesc"];
-			$this->packageStartDate = $packageData["travelstart"];
-			$this->packageEndDate = $packageData["travelend"];
-			$this->packagePrice = $packageData["travelprice"];
+			$this->ImgUrl = $packageData["PkgImgUrl"];
+			$this->Name = $packageData["PkgName"];
+			$this->Desc = $packageData["PkgDesc"];
+			$this->StartDate = $packageData["PkgStartDate"];
+			$this->EndDate = $packageData["PkgEndDate"];
+			$this->Price = $packageData["PkgBasePrice"];
 		}
-		public function getpackageURL(){
-			return $this->packageURL;
+		public function getImgUrl(){
+			return $this->ImgUrl;
 		}
-		public function getpackageName(){
-			return $this->packageName;
+		public function getName(){
+			return $this->Name;
 		}
-		public function getpackageDesc(){
-			return $this->packageDesc;
+		public function getDesc(){
+			return $this->Desc;
 		}
-		public function getpackageStartDate(){
-			return $this->packageStartDate;
+		public function getStartDate(){
+			return $this->StartDate;
 		}
-		public function getpackageEndDate(){
-			return $this->packageEndDate;
+		public function getEndDate(){
+			return $this->EndDate;
 		}
-		public function getpackagePrice(){
-			return $this->packagePrice;
+		public function getPrice(){
+			return $this->Price;
 		}
-		public function setpackageURL($packageURL){
-			$this->packageURL = $packageURL;
+		public function setImgUrl($ImgUrl){
+			$this->ImgUrl = $ImgUrl;
 		}
-		public function setpackageName($packageName){
-			$this->packageName = $packageName;
+		public function setName($Name){
+			$this->Name = $Name;
 		}
-		public function setpackageDesc($packageDesc){
-			$this->packageDesc = $packageDesc;
+		public function setDesc($Desc){
+			$this->Desc = $Desc;
 		}
-		public function setpackageStartDate($packageStartDate){
-			$this->packageStartDate = $packageStartDate;
+		public function setStartDate($StartDate){
+			$this->StartDate = $StartDate;
 		}
-		public function setpackageEndDate($packageEndDate){
-			$this->packageEndDate = $packageEndDate;
+		public function setEndDate($EndDate){
+			$this->EndDate = $EndDate;
 		}
-		public function setpackagePrice($packagePrice){
-			$this->packagePrice = $packagePrice;
+		public function setPrice($Price){
+			$this->Price = $Price;
 		}
 		public function toString(){
-			$output = $this->packageURL . ',';
-			$output .= $this->packageName . ',';
-			$output .= $this->packageDesc . ',';
-			$output .= $this->packageStartDate . ',';
-			$output .= $this->packageEndDate . ',';
-			$output .= $this->packagePrice;
+			$output = $this->ImgUrl . ',';
+			$output .= $this->Name . ',';
+			$output .= $this->Desc . ',';
+			$output .= $this->StartDate . ',';
+			$output .= $this->EndDate . ',';
+			$output .= $this->Price;
 			return $output;
 		}
 	}
