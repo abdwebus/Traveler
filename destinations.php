@@ -21,11 +21,25 @@
 	<?php include 'templates/subheader.php' ?>
 
   <?php
-  include_once("models/connect.php");
+  // session_start();
+  include_once('models/connect.php');
   $date = date("Y-m-d H:i:s");
   $query = "SELECT * FROM `packages` WHERE `PkgEndDate` > '$date'";
   $results = mysqli_query($connect, $query) or die("database error:". mysqli_error($connect));
   ?>
+
+  <div class="container">
+  <?php if(isset($_GET['status']) & !empty($_GET['status'])){ 
+        if($_GET['status'] == 'success'){
+          echo "<div class=\"alert alert-success\" role=\"alert\">Item Successfully Added to Cart</div>";
+        }elseif ($_GET['status'] == 'incart') {
+          echo "<div class=\"alert alert-info\" role=\"alert\">Item is Already Exists in Cart</div>";
+        }elseif ($_GET['status'] == 'failed') {
+          echo "<div class=\"alert alert-danger\" role=\"alert\">Failed to Add item, try to Add Again</div>";
+        }
+    }
+  ?>
+  </div>
 
   <div class="row card-deck cardpadding">
 
@@ -44,20 +58,22 @@
             <li id="myelement" class="list-group-item"><?php echo $record['PkgEndDate']; ?></li>
             <li class="list-group-item"><?php echo $record['PkgBasePrice']; ?></li>
           </ul>
-          <a href="#" class="btn btn-primary">Add to Cart</a>
-        </div>
+          <a href="addtocart.php?id=<?php echo $record['PackageId']; ?>" class="btn btn-primary" role="button">Add to Cart</a>
       </div>
+    </div>
     
   <?php 
   } 
   ?>
   </div>
-  <?php
-  $record['PkgEndDate'] = strtotime('PkgEndDate');
-  ?>
+
+  
 
   <script>
-    var now = new Date($record['PkgEndDate'] * 1000);
+    var date = document.getElementById("myelement").innerHTML;
+    for(i = 0; i < date.length; i++) {
+      console.log(date[i]);
+    }
   </script>
 
   	<!-- FOOTER -->

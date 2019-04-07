@@ -39,6 +39,7 @@
 				<li><a href="index.php">HOME</a></li>
 				<li><a href="destinations.php">DESTINATIONS</a></li>
 				<li><a href="contact.php">CONTACT</a></li>
+				<li><a href="cart.php">CART</a></li>
 				<?php 
 					if(isset($_SESSION['userid'])){
 						echo "<li><a style='cursor: pointer;' id='Logout' href='logout.php'>LOGOUT</a></li>";
