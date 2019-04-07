@@ -28,11 +28,11 @@
 					·
 					<a href="#">Pricing</a>
 					·
-					<a href="#">About</a>
+					<a href="about.php">About</a>
 					·
 					<a href="#">Faq</a>
 					·
-					<a href="#">Contact</a>
+					<a href="contact.php">Contact</a>
 				</p>
 
 				<p class="footer-company-name">The Traveler &copy; 2019-2020</p>

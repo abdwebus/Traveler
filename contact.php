@@ -43,11 +43,11 @@
   				<img class="card-img-top" src="https://bit.ly/2D2fE8j" alt="Card image cap">
   				<div class="card-body">
     			<h5 class="card-title"><?php echo $record['AgncyCity']; ?> <?php echo $record['AgncyProv']; ?>, <?php echo $record['AgncyCountry']; ?></h5>
-				<p class="card-text">Address: <?php echo $record['AgncyAddress']; ?></p>
+				<p class="card-text">Office Address: <?php echo $record['AgncyAddress']; ?></p>
 				<p class="card-text">Phone: <?php echo $record['AgncyPhone']; ?></p>
 				<p class="card-text">Fax: <?php echo $record['AgncyFax']; ?></p>
 				<a href="agents.php" class="btn btn-primary">Agents</a>
-				<a href="#" class="btn btn-primary">Location maps</a>
+				<a href="#" class="btn btn-primary">Location</a>
 				
 				  </div>
   				
