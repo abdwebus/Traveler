@@ -16,6 +16,8 @@ if (isset($_POST)){
 		$credentialID = createCredential($connect, $_POST);
 		createCustomer($connect, $_POST, $credentialID);
 		mysqli_close($connect);
+		session_Start();
+		$_SESSION['userid'] = $credentialID;
 		header('Location: ../index.php');
 		exit;
 	}
