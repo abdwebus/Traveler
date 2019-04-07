@@ -12,15 +12,15 @@
 			</div>
 			<div class="form-group">
 				<label for="InputEmail1" class="sr-only">Email address</label>
-				<input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+				<input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
 				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 			</div>
 			<div class="form-group">
-				<input type="password" class="form-control" id="signupPassword" placeholder="Password" name="password">
-				<input type="password" class="form-control" id="signupConfirmPassword" placeholder="Confirm password">
-			</div>
-			<div class="checkbox mb-3">
-				<input type="checkbox" value="remember-me"> I agree to the terms and conditions
+				<input type="password" class="form-control" id="signupPassword" placeholder="Password" name="password" required>
+				<input type="password" class="form-control" id="signupConfirmPassword" placeholder="Confirm password" name="confirmPassword" required>
+				<div class="invalid-feedback">
+					Passwords don't match!
+				</div>
 			</div>
 		</div>
 
@@ -31,20 +31,28 @@
 			<div class="form-row form-group">
 				<div class="col">
 					<label for="firstNameInput" class="sr-only">First name</label>
-					<input type="text" class="form-control" id="firstNameInput" placeholder="First name" name="firstName">
+					<input type="text" class="form-control" id="firstNameInput" placeholder="First name" name="firstName" maxlength="25">
 				</div>
 				<div class="col">
 					<label for="lastNameInput" class="sr-only">Last name</label>
-					<input type="text" class="form-control" id="lastNameInput" placeholder="Last name" name="lastName">
+					<input type="text" class="form-control" id="lastNameInput" placeholder="Last name" name="lastName" maxlength="25">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="businessPhoneInput" class="sr-only">Business phone number</label>
-				<input type="tel" class="form-control" id="businessPhoneInput" placeholder="Business phone number" name="businessPhone">
+				<input type="tel" class="form-control" id="businessPhoneInput" placeholder="Business phone number" name="businessPhone" maxlength="10">
+				<small id="telHelp" class="form-text text-muted">e.g. 7805556666</small>
+				<div class="invalid-feedback">
+					Valid business phone number is required
+				</div>
 			</div>
 			<div class="form-group">
 				<label for="homePhoneInput" class="sr-only">Business phone number</label>
-				<input type="tel" class="form-control" id="homePhoneInput" placeholder="Home phone number" name="homePhone">
+				<input type="tel" class="form-control" id="homePhoneInput" placeholder="Home phone number" name="homePhone" maxlength="10">
+				<small id="telHelp" class="form-text text-muted">e.g. 7805556666 (Optional)</small>
+				<div class="invalid-feedback">
+					Phone number is invalid
+				</div>
 			</div>
 		</div>
 
@@ -54,36 +62,39 @@
 			</div>
 			<div class="form-group">
 				<label for="inputAddress" class="sr-only">Address</label>
-				<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address1">
+				<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address1" maxlength="25">
 			</div>
 			<div class="form-group">
 				<label for="inputAddress2" class="sr-only">Address 2</label>
-				<input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="address2">
+				<input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="address2" maxlength="10">
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-5">
 					<label for="inputCity" class="sr-only">City</label>
-					<input type="text" class="form-control" id="inputCity" placeholder="City" name="city">
+					<input type="text" class="form-control" id="inputCity" placeholder="City" name="city" maxlength="20">
 				</div>
 				<div class="form-group col-md-4">
 					<label for="inputState" class="sr-only">Province</label>
 					<select id="inputState" class="form-control" name="province">
 						<option selected>Province...</option>
-						<option>Alberta</option>
-						<option>British Columbia</option>
-						<option>Manitoba</option>
-						<option>New Brunswick</option>
-						<option>Newfoundland and Labrador</option>
-						<option>Nova Scotia</option>
-						<option>Ontario</option>
-						<option>Prince Edward Island</option>
-						<option>Quebec</option>
-						<option>Saskatchewan</option>
+						<option>AB</option>
+						<option>BC</option>
+						<option>MB</option>
+						<option>NB</option>
+						<option>NL</option>
+						<option>NS</option>
+						<option>NT</option>
+						<option>NU</option>
+						<option>ON</option>
+						<option>PE</option>
+						<option>QC</option>
+						<option>SK</option>
+						<option>YT</option>
 					</select>
 				</div>
 				<div class="form-group col-md-3" class="sr-only">
 					<label for="inputZip" class="sr-only">Zip</label>
-					<input type="text" class="form-control" id="inputZip" placeholder="Zip" name="zip">
+					<input type="text" class="form-control" id="inputZip" placeholder="Zip" name="zip" maxlength="7">
 				</div>
 			</div>
 		</div>
@@ -96,10 +107,6 @@
 			<span class="step"></span>
 			<span class="step"></span>
 		</div>
-		<div  class="centerText">
-			<p class="mt-5 mb-3 text-muted">© 2019-2020</p>	
-		</div>
-		
 	</form>
 </div>
 
