@@ -41,14 +41,6 @@ var currentTab = 0; // Current tab is set to be the first tab (0)
 // }
 
 
-document.getElementById('login').addEventListener('click', function(){
-	showLogin();
-});
-
-document.getElementById('signup').addEventListener('click', function(){
-	showSignup();
-});
-
 document.getElementById('loginCloseButton').addEventListener('click', function(){
 	hideLogin();
 });

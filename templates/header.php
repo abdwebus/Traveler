@@ -23,6 +23,9 @@
 		</div>
 	</nav>
 </header> -->
+<?php 
+	session_Start();
+?>
 <header>
 	<nav class="fixed-top">
 		<div class="menu-icon">
@@ -36,8 +39,15 @@
 				<li><a href="index.php">HOME</a></li>
 				<li><a href="destinations.php">DESTINATIONS</a></li>
 				<li><a href="contact.php">CONTACT</a></li>
-				<li id="signup">REGISTER</li>
-				<li id="login">LOGIN</li>
+				<li><a href="cart.php">CART</a></li>
+				<?php 
+					if(isset($_SESSION['userid'])){
+						echo "<li><a style='cursor: pointer;' id='Logout' href='logout.php'>LOGOUT</a></li>";
+					} else {
+						echo "<li><a style='cursor: pointer;' id='signup' onclick='showSignup()'>REGISTER</a></li>";
+						echo "<li><a style='cursor: pointer;' id='login' onclick='showLogin()'>LOGIN</a></li>";
+					}
+				?>
 			</ul>
 		</div>
 	</nav>

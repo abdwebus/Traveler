@@ -1,6 +1,6 @@
 <!-- Author: Abdulwahab Alansari -->
 <div id="signupModal-wrapper" class="modal">
-	<form id="regForm" class="form-content form-signup animate" action="model/register.php" method="POST">
+	<form id="regForm" class="form-content form-signup animate" action="model/signupModel.php" method="POST">
 		<div class="imgcontainer centerText">
 			<span id="signupCloseButton" class="close" title="Close PopUp">&times;</span>
 			<img class="mb-4" src="images/Logo.png" alt="" width="75" height="54">
