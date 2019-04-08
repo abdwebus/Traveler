@@ -26,6 +26,9 @@
 	
 	
 			<div>
+				<!-- /*mouseover*/ -->
+			<!-- <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="smiley.gif" alt="Smiley" width="32" height="32"> -->
+				<!-- ends here -->
 			<?php
  	 		include_once("models/connect.php");
  	 		$query = "SELECT * FROM agencies";
@@ -37,10 +40,13 @@
 			<?php
 			while( $record = mysqli_fetch_assoc($results) ) {
 			?>  
+		<main>
+
+	
 
 				<div class="row">
 			    <div class="card" style="width: 18rem;">
-  				<img class="card-img-top" src="https://bit.ly/2D2fE8j" alt="Card image cap">
+				<img class="card-img-top" src="https://bit.ly/2D2fE8j" alt="Card image cap">
   				<div class="card-body">
     			<h5 class="card-title"><?php echo $record['AgncyCity']; ?> <?php echo $record['AgncyProv']; ?>, <?php echo $record['AgncyCountry']; ?></h5>
 				<p class="card-text">Office Address: <?php echo $record['AgncyAddress']; ?></p>
@@ -49,28 +55,30 @@
 				<a href="agents.php" class="btn btn-primary">Agents</a>
 				<a href="#" class="btn btn-primary">Location</a>
 				
-				  </div>
-  				
+				
 			</div>
+  			</div>
 		
 	
 			<?php 
 			} 
 			?>  
-			
+		
 			</div>
 			</div> <!-- Container end -->
-
-		<!-- FOOTER -->
+		</main>		
+			<!-- FOOTER -->
 			<?php include 'templates/footer.php' ?>
 			
 			
-</main>
+
   
 <!-- Bootstrap JS -->
 	<script src="js/app.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- mouse over -->
+
 </body>
 </html>

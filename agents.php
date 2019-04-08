@@ -28,7 +28,7 @@
         <div>
 			<?php
  	 		include_once("models/connect.php");
- 	 		$query = "SELECT * FROM agents";
+ 	 		$query = "SELECT * FROM agents, Agencies";
  	 		$results = mysqli_query($connect, $query) or die("database error:". mysqli_error($connect));
   			?> 
 		</div>
@@ -42,23 +42,23 @@
 
 
 
-<div style="overflow-x:auto;">
+<!-- <div style="overflow-x:auto;"> -->
 <div class="table">
   <table>
     <tr>
       <th>Agent Id</th>
       <th>FirstName</th>
       <th>LastName</th>
-      <th>Agency Id</th>
+      <th>Agency Location</th>
       <th>Agent Position</th>
-      <th><a href="#" class="btn btn-primary">Business Phone</th>
-      <th><a href="#" class="btn btn-primary">Email address</a></th>
+      <th>Business Phone</th>
+      <th><a href="#" class="btn btn-primary">Email Agent</a></th>
     </tr>
     <tr>
       <td><?php echo $record['AgentId']; ?></td>
       <td><?php echo $record['AgtFirstName']; ?></td>
       <td><?php echo $record['AgtLastName']; ?></td>
-      <td><?php echo $record['AgencyId']; ?></td>
+      <td><?php echo $record['AgncyCity']; ?></td>
       <td><?php echo $record['AgtPosition']; ?></td>
       <td><?php echo $record['AgtBusPhone']; ?></td>
       <td><?php echo $record['AgtEmail']; ?></td>

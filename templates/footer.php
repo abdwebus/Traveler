@@ -19,25 +19,27 @@
 				
 				<div>
 				<img height="95" width="95" src="images/logo_transparent.png">
-				</div>
+			
+				
+			</div>
 
 				<p class="footer-links">
 					<a href="index.php">Home</a>
-					·
-					<a href="#">Blog</a>
 					·
 					<a href="#">Pricing</a>
 					·
 					<a href="about.php">About</a>
 					·
-					<a href="#">Faq</a>
+					<a href="faq.php">Faq</a>
 					·
 					<a href="contact.php">Contact</a>
 				</p>
 
 				<p class="footer-company-name">The Traveler &copy; 2019-2020</p>
+				<img height="95" width="95" src="https://www.emirates.com/ca/english/images/Apple_EN_tcm302-4143604.svg">
+				<img height="95" width="95" src="https://www.emirates.com/ca/english/images/Google_EN_tcm302-4143606.svg">
 			</div>
-
+			
 			<div class="footer-center">
 
 				<div>
@@ -49,12 +51,13 @@
 
 				<div>
 					<i class="fa fa-phone"></i>
-					<p>+780 123 4568</p>
+					<p>1-877-233-4567</p>
 				</div>
 
 				<div>
 					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:support@company.com">support@Traveler.com</a></p>
+					<p><a href="mailto:support@company.com">customerservice@traveler.com</a></p><br>
+					<p><img height="95" width="90" src="images/expedia.png"></p>
 				</div>
 
 			</div>
@@ -72,7 +75,12 @@
 					<a href="#"><i class="fa fa-twitter"></i></a>
 					<a href="#"><i class="fa fa-linkedin"></i></a>
 					<a href="#"><i class="fa fa-github"></i></a>
-
+				<div>
+				<img height="95" width="95" src="https://www.emirates.com/ca/english/images/Apex_Badge_EN_tcm302-5456919.svg">
+				<img height="50" width="50" src="images/bestvacations.png">
+				<!-- <img height="95" width="90" src="images/expedia.png"> -->
+				<!-- <img height="95" width="95" src="https://www.emirates.com/ca/english/images/skytrax_badge_2018_tcm302-4231454.svg"> -->
+				
 				</div>
 
 			</div>

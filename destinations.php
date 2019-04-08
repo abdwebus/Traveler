@@ -55,7 +55,8 @@
   <?php
   $record['PkgEndDate'] = strtotime('PkgEndDate');
   ?>
-
+</div>
+</div>
   <script>
     var now = new Date($record['PkgEndDate'] * 1000);
   </script>

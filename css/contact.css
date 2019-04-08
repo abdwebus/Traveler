@@ -213,11 +213,42 @@
         border: 1px solid rgb(37, 68, 100);
         padding: 4px 8px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 130%;
+        font-size: 120%;
         
         }
 
         table tr:nth-child(odd) td {
             background-color: lightsalmon;
         }
+       
+        /* about link in footer*/
+        .para1 {
+            font-family: italic;
+            font-size: 20px;
+            padding: auto;
+            background-color: lightgray;
+        }
+
+        .para2 {
+            font-family: italic;
+            font-size: 25px;
+            padding: auto;
+            background-color: lightskyblue;
+        }
+
+        .para3 {
+            font-family: italic;
+            font-size: 25px;
+            padding: auto;
+            background-color: lightskyblue;
+        }
+
+        .h1style {
+            font-family: italic;
+            font-size: 35px;
+            padding: auto;
+            background-color: rgb(155, 45, 45);
+        }
+
+
 
