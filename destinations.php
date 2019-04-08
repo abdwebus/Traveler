@@ -7,6 +7,7 @@
 	<!-- Custom CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/ariel.css">
+  <link rel="stylesheet" type="text/css" href="css/contact.css">
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -66,17 +67,9 @@
   } 
   ?>
   </div>
-<<<<<<< HEAD
-  <?php
-  $record['PkgEndDate'] = strtotime('PkgEndDate');
-  ?>
-</div>
-</div>
-=======
 
   
 
->>>>>>> ee0d964ea0c608b0646581b2c36ed713696b1d64
   <script>
     var date = document.getElementById("myelement").innerHTML;
     for(i = 0; i < date.length; i++) {
