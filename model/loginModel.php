@@ -1,10 +1,9 @@
-<!-- Author: Abdulwahab Alansari -->
 <?php
+// Author: Abdulwahab Alansari
 
 if(isset($_POST)){
 	include 'classes.php';
-	$user = new User($_POST['email'], $_POST['password']);
-	$email = $user->getEmail();
+	$email = $_POST['email'];
 
 	// Create DB connection
 	$connect = mysqli_connect('localhost', 'agent', '', 'travelexperts');
@@ -16,9 +15,16 @@ if(isset($_POST)){
     $result=mysqli_query($connect, $sql);
     $row = mysqli_fetch_assoc($result);
     if(isset($row)){
-    	echo $row['email'];
-    	echo '</br>';
-    	echo $row['password'];
+    	if(password_verify($_POST['password'], $row['password'])){
+			echo "success";
+			session_Start();
+    		$_SESSION['userid'] = $row['userID'];
+			// header('Location: ../index.php');
+    	} else {
+    		echo "err";
+    	}
+    } else {
+    	echo "err";
     }
 }
 ?>

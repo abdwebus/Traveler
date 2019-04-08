@@ -20,13 +20,13 @@
 .form-signup .form-control:focus {
 	z-index: 2;
 }
-.form-signin input[type="email"],
+/*.form-signin input[type="email"],*/
 #signupPassword {
 	margin-bottom: -1px;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
 }
-.form-signin input[type="password"],
+/*.form-signin input[type="password"],*/
 #signupConfirmPassword {
 	margin-bottom: 10px;
 	border-top-left-radius: 0;
