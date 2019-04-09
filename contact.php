@@ -43,7 +43,9 @@
     	<?php include 'templates/header.php' ?>
 		<?php include 'templates/subheader.php' ?>
 	</header>
-		
+	<section>
+
+	</section>	
 		
 	<main class="container">
 		<!-- agencies -->
@@ -61,8 +63,8 @@
 					<p class="card-text">Office Address: <?php echo $record['AgncyAddress']; ?></p>
 					<p class="card-text">Phone: <?php echo $record['AgncyPhone']; ?></p>
 					<p class="card-text">Fax: <?php echo $record['AgncyFax']; ?></p>
-					<a href="https://bit.ly/2I9On86" class="btn btn-primary" id="show-option" title="click here for map location"><i class="icon-edit icon-white">Calgary Downtown location</i></a>
-					<a href="https://bit.ly/2I9On86" class="btn btn-primary" id="show-option" title="click here for map location"><i class="icon-edit icon-white">Okotoks Downtown Location</i></a>
+					<a href="https://bit.ly/2I9On86" class="btn btn-primary" id="show-option" title="click here for map location"><i class="icon-edit icon-white"><?php echo $record['AgncyCity']; ?></i></a>
+					<!-- <a href="https://bit.ly/2I9On86" class="btn btn-primary" id="show-option" title="click here for map location"><i class="icon-edit icon-white">Okotoks Downtown Location</i></a> -->
 				</div>
 			</div>
 		<?php } ?>
@@ -77,9 +79,10 @@
  	 		$query = "SELECT * FROM agents";
  	 		$results = mysqli_query($connect, $query) or die("database error:". mysqli_error($connect));
   		?>
-	
-		
-		
+<section>
+
+
+</section>
 		
 <section id="team" class="pb-5">
     <div class="container">
@@ -147,8 +150,8 @@
 
 <div class="container content">
     <div class="heading">
-        <h2>Our <strong>Great Team</strong></h2>
-        <p>To try the most advanced business</p>
+        <h2><strong>Our Management team</strong></h2>
+        <p>Its Our Pleasure to do business with you</p>
     </div><!-- //end heading -->
 
 	<div class="row">
@@ -158,7 +161,7 @@
                     <img class="img-responsive" src="http://keenthemes.com/assets/bootsnipp/member1.png" alt="">
                 </div>
                 <div class="team-desc">
-                    <h4>Liam</h4>
+                    <h4>Paul Stern</h4>
                     <span>Marketing</span>
                 </div>
             </div>
@@ -169,7 +172,7 @@
                     <img class="img-responsive" src="http://keenthemes.com/assets/bootsnipp/member2.png" alt="">
                 </div>
                 <div class="team-desc">
-                    <h4>Ariel</h4>
+                    <h4>Sarah Parker</h4>
                     <span>Founder</span>
                 </div>
             </div>
@@ -180,7 +183,7 @@
                     <img class="img-responsive" src="http://keenthemes.com/assets/bootsnipp/member3.png" alt="">
                 </div>
                 <div class="team-desc">
-                    <h4>Abed</h4>
+                    <h4>steve Jobs</h4>
                     <span>Director</span>
                 </div>
             </div>
@@ -195,8 +198,10 @@
 </center>
 <br>
 <br>
-<!-- This live preview for <a href="http://en.wikipedia.org/">Wikipedia</a><div class="box"><iframe src="http://en.wikipedia.org/" width = "500px" height = "500px"></iframe></div> remains open on mouseover. -->
 </section>
+
+<!-- email newsletter -->
+
 <section class="subscribe-area pb-50 pt-70">
 <div class="container">
 	<div class="row">

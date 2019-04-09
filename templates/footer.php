@@ -58,7 +58,7 @@
 				<div>
 					<i class="fa fa-envelope"></i>
 					<p><a href="mailto:support@company.com">customerservice@traveler.com</a></p><br>
-					<p><img height="110" width="100" src="images/expedia.png"></p>
+					<!-- <p><img height="110" width="100" src="images/expedia.png"></p> -->
 				</div>
 
 			</div>
