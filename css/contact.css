@@ -247,7 +247,7 @@
             font-family: italic;
             font-size: 35px;
             padding: auto;
-            background-color: rgb(155, 45, 45);
+            background-color:#007bff;
         }
 
 		.row {
@@ -276,7 +276,7 @@
 
 			font-size: 130%;
 			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-			color: #007b5e;
+			color: #007bff;
 
 
 		}
@@ -285,7 +285,7 @@
 
 			font-size: 200%;
 			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-			color:#007b5e;
+			color:#007bff;
 
 		}
 
@@ -330,7 +330,7 @@
 			font-size: 40px;
 			font-weight: 500;
 			margin: 0 0 20px;
-			color: #444;
+			color: #007bff;
 		}
 		
 		.heading p {
@@ -338,7 +338,7 @@
 			font-weight: 300;
 			letter-spacing: 0.5px;
 			text-transform: uppercase;
-			color: #8693a7;
+			color: #007bff;
 		}
 		
 		/* Team Members */
@@ -432,7 +432,7 @@
 		/* email newsletter */
 
 		.subscribe-area {
-			background-image: linear-gradient(to top, #0a0d0e 0%, #005bea 100%);
+			background-image: linear-gradient(to top, #007bff 0%, #005bea 100%);
 			}
 			
 			.pb-50 {
