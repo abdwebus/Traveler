@@ -37,21 +37,9 @@
 			<?php include 'templates/rowContactUs.php' ?>
 
 			<hr class="featurette-divider">
+			
+			<?php include 'templates/bestPackages.php' ?>
 
-			<!-- Package row (right) -->
-			<?php include 'templates/rowPackageRight.php' ?>
-
-			<hr class="featurette-divider">
-
-			<!-- Package row (left) -->
-			<?php include 'templates/rowPackageLeft.php' ?>
-
-			<hr class="featurette-divider">
-
-			<!-- Package row (right) -->
-			<?php include 'templates/rowPackageRight.php' ?>
-
-			<hr class="featurette-divider">
 		</div>
 
 
