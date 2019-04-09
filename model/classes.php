@@ -1,5 +1,6 @@
-<!-- Author: Abdulwahab Alansari -->
 <?php 
+// Author: Abdulwahab Alansari
+
 /*
 * User Class
 *

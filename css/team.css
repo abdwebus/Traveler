@@ -28,11 +28,13 @@ section .section-title {
     color: #007b5e;
     margin-bottom: 50px;
     text-transform: uppercase;
+    font-family: Gill Sans Extrabold, sans-serif;
 }
 
 #team .card {
     border: lawngreen;
     background: #ffffff;
+   
 }
 
 .image-flip:hover .backside,
@@ -129,3 +131,4 @@ section .section-title {
     border-radius: 50%;
     color: #007b5e;
 }
+

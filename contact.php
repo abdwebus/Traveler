@@ -44,17 +44,19 @@
 			<div class="card" style="width: 45%;">
 				<img class="card-img-top" src="<?php echo $record['AgcImg']; ?>" alt="Card image cap">
 				<div class="card-body">
-					<h5 class="card-title"><?php echo $record['AgncyCity']; ?> <?php echo $record['AgncyProv']; ?>, <?php echo $record['AgncyCountry']; ?></h5>
+					<h3 class="card-title2"><?php echo $record['AgncyCity']; ?>, <?php echo $record['AgncyCountry']; ?></h3>
 					<p class="card-text">Office Address: <?php echo $record['AgncyAddress']; ?></p>
 					<p class="card-text">Phone: <?php echo $record['AgncyPhone']; ?></p>
 					<p class="card-text">Fax: <?php echo $record['AgncyFax']; ?></p>
-					<!-- <a href="agents.php" class="btn btn-primary">Agents</a>
-					<a href="#" class="btn btn-primary">Location</a> -->
+					 <a href="https://www.google.com/maps/search/calgary+office+travel+experts/@51.0118819,-114.208797,11z/data=!3m1!4b1" class="btn btn-primary">Map Location</a>
+					 
 				</div>
 			</div>
 		<?php } ?>
 		</div>
 	</main>
+
+
 	<!-- agents -->
 	
 		<?php
@@ -68,7 +70,7 @@
 		
 <section id="team" class="pb-5">
     <div class="container">
-        <h5 class="section-title h1">OUR TEAM</h5>
+        <h5 class="section-title h1">Travel Agent Team</h5>
         <div class="row">
 		<?php while( $record = mysqli_fetch_assoc($results) ){?>
             <!-- Team member -->
@@ -127,9 +129,57 @@
 </section>
  <!-- insert map here -->
 <section class="container">
+<div class="container content">
+    <div class="heading">
+        <h2>Our <strong>Great Team</strong></h2>
+        <p>To try the most advanced business</p>
+    </div><!-- //end heading -->
 
+	<div class="row">
+        <div class="col-sm-4">
+            <div class="team-members">
+                <div class="team-avatar">
+                    <img class="img-responsive" src="http://keenthemes.com/assets/bootsnipp/member1.png" alt="">
+                </div>
+                <div class="team-desc">
+                    <h4>Liam</h4>
+                    <span>Marketing</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="team-members">
+                <div class="team-avatar">
+                    <img class="img-responsive" src="http://keenthemes.com/assets/bootsnipp/member2.png" alt="">
+                </div>
+                <div class="team-desc">
+                    <h4>Ariel</h4>
+                    <span>Founder</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="team-members">
+                <div class="team-avatar">
+                    <img class="img-responsive" src="http://keenthemes.com/assets/bootsnipp/member3.png" alt="">
+                </div>
+                <div class="team-desc">
+                    <h4>Abed</h4>
+                    <span>Director</span>
+                </div>
+            </div>
+        </div>
+    </div><!-- //end row -->
+</div>
 
-
+<br>
+<br>
+<center>
+<strong>Powered by <a href="http://j.mp/metronictheme" target="_blank">Traveler@Company</a></strong>
+</center>
+<br>
+<br>
+<!-- This live preview for <a href="http://en.wikipedia.org/">Wikipedia</a><div class="box"><iframe src="http://en.wikipedia.org/" width = "500px" height = "500px"></iframe></div> remains open on mouseover. -->
 </section>
 <!-- Team -->
 

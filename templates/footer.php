@@ -27,7 +27,7 @@
 				<p class="footer-links">
 					<a href="index.php">Home</a>
 					·
-					<a href="#">Pricing</a>
+					<a href="#">Trip Builder</a>
 					·
 					<a href="about.php">About</a>
 					·

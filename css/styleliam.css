@@ -18,6 +18,7 @@
 	table-layout: inherit;
 	text-align: center;
 	margin-top: 40px;
+	background-color: #5383d3;
 	
 
 }
@@ -156,40 +157,6 @@
 	margin-right: 3px;
 	margin-bottom: 5px;
 } */
-
- /* //--agents page--// */
-    /* table {
-    border-collapse:collapse;
-    margin-right:auto;
-    margin-left:auto;
-    width:100%;
-
-    }
-    
-    }
-    table th {
-    text-align: left;
-    background-color: #3a6070;
-    color: lightseagreen;
-    padding: auto;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ; 
-    font-size: 130%;
-    }
-    
-    table td {
-    border: 1px solid rgb(37, 68, 100);
-    padding: 4px 8px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 130%;
-    
-    }
-
-    table tr:nth-child(odd) td {
-        background-color: lightsalmon;
-		}
-		 */
-
-
 
 
 /* If you don't want the footer to be responsive, remove these media queries */

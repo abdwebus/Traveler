@@ -10,35 +10,45 @@ var currentTab = 0; // Current tab is set to be the first tab (0)
 // 	}
 // }
 
-// function go(){
-// 	console.log('we got to here');
-// 	var request = $.ajax({
-// 		url: 'model/register.php',
-// 		type: "POST",
-// 		data: {
-// 		email: $('#InputEmail').val(),
-// 		password: $('#signupPassword').val(),
-// 		confirmPassword: $('#signupConfirmPassword').val(),
-// 		firstName: $('#firstNameInput').val(),
-// 		lastName: $('#lastNameInput').val(),
-// 		businessPhone: $('#businessPhoneInput').val(),
-// 		homePhone: $('#homePhoneInput').val(),
-// 		address1: $('#inputAddress').val(),
-// 		address2: $('#inputAddress2').val(),
-// 		city: $('#inputCity').val(),
-// 		province: $('#inputState').val(),
-// 		zip: $('#inputZip').val(),},
-// 		dataType: "html"
-// 	});
+function login(event){
+	email = document.getElementById('loginEmail');
+	password = document.getElementById('loginPassword');
+	if(!validateEmail(email)){
+		return;
+	}
 
-// 	request.done(function(msg) {
-// 		alert(msg);
-// 	});
+	if(!hasContent(password)){
+		return;
+	}
+	var request = $.ajax({
+		url: 'model/loginModel.php',
+		type: "POST",
+		data: {
+		email: $('#loginEmail').val(),
+		password: $('#loginPassword').val(),
+		},
+		dataType: "html"
+	});
 
-// 	request.fail(function(jqXHR, textStatus) {
-// 		alert( "Request failed: " + textStatus );
-// 	});
-// }
+	request.done(function(msg) {
+		console.log(msg);
+		password = document.getElementById('loginPassword');
+		email = document.getElementById('loginEmail');
+		if(msg === 'err'){
+			document.getElementById('loginInvalid').style.display = 'block';
+		}
+		if(msg === 'success'){
+			document.getElementById('loginInvalid').style.display = 'none';
+			flagAsValid(password);
+			flagAsValid(email);
+			location.reload();
+		}
+	});
+
+	request.fail(function(jqXHR, textStatus) {
+		alert( "Request failed: " + textStatus );
+	});
+}
 
 
 document.getElementById('loginCloseButton').addEventListener('click', function(){
