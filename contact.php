@@ -49,7 +49,7 @@
 		<!-- agencies -->
 		<?php
  	 		include_once("models/connect.php");
- 	 		$query = "SELECT * FROM agencies ";
+ 	 		$query = "SELECT * FROM agencies WHERE AgcImg IS NOT NULL";
  	 		$results = mysqli_query($connect, $query) or die("database error:". mysqli_error($connect));
   		?>
 		<div class="row">
@@ -74,7 +74,7 @@
 	
 		<?php
  	 		include_once("models/connect.php");
- 	 		$query = "SELECT * FROM agents";
+ 	 		$query = "SELECT * FROM agents WHERE AgtImg IS NOT NULL";
  	 		$results = mysqli_query($connect, $query) or die("database error:". mysqli_error($connect));
   		?>
 	
