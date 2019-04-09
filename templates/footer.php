@@ -25,9 +25,9 @@
 					·
 					<a href="#">Packages</a>
 					·
-					<a href="templates/about.php">About</a>
+					<a href="about.php">About</a>
 					·
-					<a href="templates/faq.php">FAQ</a>
+					<a href="faq.php">FAQ</a>
 					·
 					<a href="contact.php">Contact</a>
 				</p>
