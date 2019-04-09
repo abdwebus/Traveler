@@ -109,7 +109,7 @@
 }
 
 .footer-distributed .footer-center p a{
-	color:  #5383d3;
+	color:  #007bff;
 	text-decoration: none;;
 }
 
@@ -138,24 +138,9 @@
 
 .footer-distributed .footer-icons{
 	margin-top: 25px;
+
 }
 
-.footer-distributed .footer-icons a{
-	display: inline-block;
-	width: 35px;
-	height: 35px;
-	cursor: pointer;
-	background-color:  #33383b;
-	border-radius: 2px;
-
-	font-size: 20px;
-	color: #ffffff;
-	text-align: center;
-	line-height: 35px;
-
-	margin-right: 3px;
-	margin-bottom: 5px;
-}
 
 /* If you don't want the footer to be responsive, remove these media queries */
 
@@ -180,7 +165,7 @@
 
 	.card{
 
-        background-color: #5383d3;
+        background-color: #007bff;
 
     }
 
@@ -247,7 +232,8 @@
             font-family: italic;
             font-size: 35px;
             padding: auto;
-            background-color:#007bff;
+			background-color:lightskyblue;
+			text-align: center;
         }
 
 		.row {
@@ -436,14 +422,14 @@
 			}
 			
 			.pb-50 {
-				padding-bottom: 30px;
+				padding-bottom: 25px;
 			}
 			.pt-70 {
-				padding-top: 60px;
+				padding-top: 50px;
 			}
 			
 			.mb-15 {
-				margin-bottom: 15px;
+				margin-bottom: 10px;
 			}
 			
 			.subscribe-text span {
@@ -463,7 +449,7 @@
 				overflow: hidden;
 			}
 			.mb-15 {
-				margin-bottom: 15px;
+				margin-bottom: 10px;
 			}
 			.subscribe-form {
 			}
