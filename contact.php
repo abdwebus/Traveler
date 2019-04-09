@@ -101,9 +101,8 @@
 									<div class="card">
 										<div class="card-body text-center">
 											<p><img class=" img-fluid" src="<?php echo $record['AgtImg']; ?>" alt="card image"></p>
-											<h4 class="card-title">Travel Expert</h4>
-											<p class="card-text"><?php echo $record['AgtFirstName']; ?> <?php echo $record['AgtLastName']; ?>,
-												<?php echo $record['AgtBusPhone']; ?></p>
+											<h4 class="card-title"><?php echo $record['AgtFirstName']; ?> <?php echo $record['AgtLastName']; ?></h4>
+											<p class="card-text"><?php echo $record['AgtBusPhone']; ?></p>
 												<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
 											</div>
 										</div>

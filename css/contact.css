@@ -341,7 +341,7 @@
 			color: #007bff;
 		}
 		
-		/* Team Members */
+		/* Company Members */
 		.team-members {
 			width: 100%;
 			cursor: pointer;
@@ -380,7 +380,7 @@
 			padding: 0 20px;
 			position: absolute;
 			opacity: 0;
-			color: #fff;
+			color:lightgrey;
 			-webkit-transform: translate3d(0, 10%, 0);
 			transform: translate3d(0, 10%, 0);
 			-webkit-transition: opacity 0.3s;
@@ -436,10 +436,10 @@
 			}
 			
 			.pb-50 {
-				padding-bottom: 50px;
+				padding-bottom: 30px;
 			}
 			.pt-70 {
-				padding-top: 70px;
+				padding-top: 60px;
 			}
 			
 			.mb-15 {
