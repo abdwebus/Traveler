@@ -15,6 +15,7 @@
   
 </head>
 <body>
+    <?php $title = "CART"; ?>
 	<!-- Navbar -->
 	<?php include 'templates/header.php' ?>
 

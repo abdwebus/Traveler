@@ -14,6 +14,7 @@
   
 </head>
 <body>
+	<?php $title = "ADMIN PAGE"; ?>
 	<!-- Navbar -->
 	<?php include 'templates/header.php' ?>
 

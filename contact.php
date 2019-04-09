@@ -39,7 +39,7 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-	
+	<?php $title = 'CONTACT US'; ?>
 	<Header>
 		<?php include 'templates/header.php' ?>
 		<?php include 'templates/subheader.php' ?>
