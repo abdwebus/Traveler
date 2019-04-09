@@ -158,7 +158,6 @@
 					<p>Its Our Pleasure to do business with you</p>
 				</div><!-- //end heading -->
 
-<<<<<<< HEAD
 	<div class="row">
         <div class="col-sm-4">
             <div class="team-members">
@@ -195,44 +194,6 @@
         </div>
     </div><!-- //end row -->
 </div>
-=======
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="team-members">
-							<div class="team-avatar">
-								<img class="img-responsive" src="http://keenthemes.com/assets/bootsnipp/member1.png" alt="">
-							</div>
-							<div class="team-desc">
-								<h4>Paul Stern</h4>
-								<span>Marketing</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="team-members">
-							<div class="team-avatar">
-								<img class="img-responsive" src="http://keenthemes.com/assets/bootsnipp/member2.png" alt="">
-							</div>
-							<div class="team-desc">
-								<h4>Sarah Parker</h4>
-								<span>Founder</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="team-members">
-							<div class="team-avatar">
-								<img class="img-responsive" src="http://keenthemes.com/assets/bootsnipp/member3.png" alt="">
-							</div>
-							<div class="team-desc">
-								<h4>steve Jobs</h4>
-								<span>Director</span>
-							</div>
-						</div>
-					</div>
-				</div><!-- //end row -->
-			</div>
->>>>>>> 2276805fcee1ce4853bb47c136858efa3efe959b
 
 			<br>
 			<br>
