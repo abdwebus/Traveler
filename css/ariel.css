@@ -111,7 +111,7 @@
 	margin-top: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1050px) { /* Abed */
 	.shopping-cart .items .product .info {
 		padding-top: 25px;
 		text-align: left; 
@@ -139,7 +139,7 @@
   padding-bottom:30px;
 }
 
-@media (max-width:767px) {
+@media (max-width:1050px) { /* Abed */
   .features-clean {
     padding-bottom:10px;
   }
@@ -156,7 +156,7 @@
   color:inherit;
 }
 
-@media (max-width:767px) {
+@media (max-width:1050px) { /* Abed */
   .features-clean h2 {
     margin-bottom:25px;
     padding-top:25px;
@@ -170,7 +170,7 @@
   margin:0 auto 60px;
 }
 
-@media (max-width:767px) {
+@media (max-width:1050px) { /* Abed */
   .features-clean .intro {
     margin-bottom:40px;
   }
@@ -182,7 +182,7 @@
   margin-bottom:40px;
 }
 
-@media (max-width:767px) {
+@media (max-width:1050px) { /* Abed */
   .features-clean .item {
     min-height:0;
   }
@@ -219,7 +219,7 @@
 .subheader {
 	height: 35vh;
 	min-height: 350px;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://bit.ly/2JWZN0D');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/13587.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -248,7 +248,7 @@
 	line-height: 50px;
 	position: fixed;
 	float: left;
-	margin: 16px 60px;
+	margin: 5px 60px; /* Abed margin: 5px 60px; */
 	color: #fff;
 	font-weight: bold;
 	font-size: 20px;
@@ -265,13 +265,13 @@ nav ul {
 	line-height: 50px;
 	list-style: none;
 	background: rgba(0, 0, 0, 0);
-	overflow: hidden;
+	/*overflow: hidden;   removed by Abed to fix the dropdown listitem */
 	color: #fff;
 	padding: 0;
 	text-align: right;
 	margin: 0;
 	padding-right: 60px;
-	transition: 1s;
+	/*transition: 1s;*/
 	text-decoration: none !important;
 }
 
@@ -284,7 +284,7 @@ nav.black ul {
 
 nav ul li {
 	display: inline-block;
-	padding: 16px 40px;;
+	padding: 5px 40px; /*Abed padding: 16px 40px;*/
 }
 
 ul.nav a:hover { color: rgb(29, 141, 76) !important; }
@@ -307,17 +307,18 @@ nav ul li a {
 	display: none;
 }
 
-@media(max-width: 786px) {
+@media(max-width: 1050px) { /* Abed */
 
 	.logo {
 		  position: fixed;
 		  top: 0;
-		  margin-top: 16px;
+		  margin-top: 5px; /*Abed margin-top: 0px;*/
 	}
 
 	nav ul {
 		  max-height: 0px;
 		  background: #000;
+		  overflow: hidden; /* Abed */
 	}
 
 	nav.black ul {
@@ -326,12 +327,13 @@ nav ul li a {
 
 	.showing {
 		  max-height: 34em;
+		  overflow: visible; /* Abed */
 	}
 
 	nav ul li {
 		  box-sizing: border-box;
 		  width: 100%;
-		  padding: 24px;
+		  /*padding: 24px;*/ /* Abed */
 		  text-align: center;
 	}
 
