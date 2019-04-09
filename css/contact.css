@@ -224,7 +224,7 @@
         /* about link in footer*/
         .para1 {
             font-family: italic;
-            font-size: 20px;
+            font-size: 25px;
             padding: auto;
             background-color: lightgray;
         }
@@ -247,8 +247,37 @@
             font-family: italic;
             font-size: 35px;
             padding: auto;
-            background-color: rgb(155, 45, 45);
+            background-color: lightgray;
         }
 
+		.row {
 
+			justify-content: space-between;
+
+			
+		}
+
+		/* .cards {
+			align-content: center;
+			align-self: center;
+			display: flex;
+			justify-content: space-between;
+		 } */
+
+		 /* .agentstable {
+
+			height: 25%;
+			width: 25%;
+
+		}
+		 */
+		.container newimage {
+
+			background-color: #5383d3;
+		}
+
+		 card-text {
+
+			
+		}
 

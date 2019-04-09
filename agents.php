@@ -25,7 +25,7 @@
     	<?php include 'templates/header.php' ?>
 		<?php include 'templates/subheader.php' ?>
         
-        <div>
+      <div>
 			<?php
  	 		include_once("models/connect.php");
  	 		$query = "SELECT * FROM agents, Agencies";

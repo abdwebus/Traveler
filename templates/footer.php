@@ -19,6 +19,7 @@
 				
 				<div>
 				<img height="95" width="95" src="images/logo_transparent.png">
+				
 			
 				
 			</div>
@@ -57,7 +58,7 @@
 				<div>
 					<i class="fa fa-envelope"></i>
 					<p><a href="mailto:support@company.com">customerservice@traveler.com</a></p><br>
-					<p><img height="95" width="90" src="images/expedia.png"></p>
+					<p><img height="110" width="100" src="images/expedia.png"></p>
 				</div>
 
 			</div>
@@ -78,8 +79,7 @@
 				<div>
 				<img height="95" width="95" src="https://www.emirates.com/ca/english/images/Apex_Badge_EN_tcm302-5456919.svg">
 				<img height="50" width="50" src="images/bestvacations.png">
-				<!-- <img height="95" width="90" src="images/expedia.png"> -->
-				<!-- <img height="95" width="95" src="https://www.emirates.com/ca/english/images/skytrax_badge_2018_tcm302-4231454.svg"> -->
+				
 				
 				</div>
 
