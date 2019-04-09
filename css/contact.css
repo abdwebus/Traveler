@@ -8,10 +8,10 @@
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
-
 	padding: 55px 50px;
-	margin-top: 80px;
-}
+	margin-top: 100px;
+
+} 
 
 
 .container-marketing {
@@ -28,7 +28,7 @@
 	display: inline-block;
 	vertical-align: top;
 
-}
+} */
 
 /* Footer left */
 
@@ -262,7 +262,7 @@
 
 			font-size: 130%;
 			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-			color: #007bff;
+			color: black;
 
 
 		}
@@ -271,7 +271,7 @@
 
 			font-size: 200%;
 			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-			color:#007bff;
+			color:black;
 
 		}
 
@@ -324,7 +324,7 @@
 			font-weight: 300;
 			letter-spacing: 0.5px;
 			text-transform: uppercase;
-			color: #007bff;
+			color: black;
 		}
 		
 		/* Company Members */

@@ -1,16 +1,12 @@
 
 
 </footer>  
-
-
-	
 	
 	<link rel="stylesheet" href="css/styleliam.css">
 	
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-
 
 	<footer class="footer-distributed">
 
@@ -22,16 +18,16 @@
 				
 			
 				
-			</div>
+				</div>
 
 				<p class="footer-links">
 					<a href="index.php">Home</a>
 					·
-					<a href="#">Trip Builder</a>
+					<a href="#">Packages</a>
 					·
-					<a href="about.php">About</a>
+					<a href="templates/about.php">About</a>
 					·
-					<a href="faq.php">Faq</a>
+					<a href="templates/faq.php">FAQ</a>
 					·
 					<a href="contact.php">Contact</a>
 				</p>

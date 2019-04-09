@@ -1,4 +1,9 @@
-/* FontAwesome for working BootSnippet :> */
+
+
+/* team card design */
+
+
+
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 #team {
@@ -25,7 +30,7 @@ section {
 
 section .section-title {
     text-align: center;
-    color: #007bff;
+    color: black;
     margin-bottom: 50px;
     text-transform: uppercase;
     font-family: Gill Sans Extrabold, sans-serif;
