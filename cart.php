@@ -21,88 +21,93 @@
 	<?php include 'templates/subheader.php' ?>
 
 	<?php
-	// session_start();
+	if (session_status() == PHP_SESSION_NONE) {
+		session_start();
+	}
 	require_once('models/connect.php'); 
 
 	$items = $_SESSION['cart'];
 	$cartitems = explode(",", $items);
 	?>
-	
-	<main class="page">
-	 	<section class="shopping-cart dark">
-	 		<div class="container">
-		        <div class="block-heading">
-		          <h2>Shopping Cart</h2>
-		        </div>
-		      <div class="content">
-	 					<div class="row">
+    
+    <div class="container">
+    <div class="card shopping-cart">
+                <div class="card-header bg-dark text-light">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    Shopping Cart
+                    <a href="destinations.php" class="btn btn-outline-info btn-sm pull-right">Continue Shopping</a>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="card-body">
 
-					 <?php
+                        <?php
 						$total = 0;
 						$i=1;
 						foreach ($cartitems as $key=>$id) {
 							$sql = "SELECT * FROM packages WHERE PackageId = $id";
 							$results = mysqli_query($connect, $sql);
 							$record = mysqli_fetch_assoc($results);
-						?>	  	
-
-	 					<div class="col-md-12 col-lg-8">
-	 						<div class="items">
-				 				<div class="product">
-				 					<div class="row">
-
-					 					<div class="col-md-3">
-					 						<img class="img-fluid mx-auto d-block image" src="<?php echo $record['PkgImgUrl']; ?>">
-										</div>
-										 
-					 					<div class="col-md-8">
-					 						<div class="info">
-						 						<div class="row">
-							 						<div class="col-md-5 product-name">
-							 							<div class="product-name">
-								 							<a href="#"><?php echo $record['PkgName']; ?></a>
-								 							<div class="product-info">
-									 							<div><span class="value"><?php echo $record['PkgStartDate']; ?></span></div>
-									 							<div><span class="value"><?php echo $record['PkgEndDate']; ?></span></div>
-									 						</div>
-									 					</div>
-							 						</div>
-							 						<div class="col-md-3 price">
-							 							<span><?php echo $record['PkgBasePrice']; ?></span>
-							 						</div>
-							 					</div>
-											 </div>
-										 </div>
-										 
-					 				</div>
-				 				</div>
-				 			</div>
-						 </div>
-
-						 <?php 
+                        ?>	  	
+                        
+                        <!-- PRODUCT -->
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-2 text-center">
+                                    <img class="img-responsive" src="<?php echo $record['PkgImgUrl']; ?>" alt="prewiew" width="120" height="80">
+                            </div>
+                            <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+                                <h4 class="product-name"><strong><?php echo $record['PkgName']; ?></strong></h4>
+                                <h4>
+                                    <small><?php echo $record['PkgStartDate']; ?> - <?php echo $record['PkgEndDate']; ?></small>
+                                </h4>
+                            </div>
+                            <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+                                <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+                                    <h6><strong>$<?php echo $record['PkgBasePrice']; ?></strong></h6>
+                                </div>
+                                <div class="col-2 col-sm-2 col-md-2 text-right">
+                                    <button type="button" class="btn btn-outline-danger btn-xs"><a href="delcart.php?remove=<?php echo $key; ?>">
+                                        <i class="fa fa-trash" aria-hidden="true"></i></a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- END PRODUCT -->
+            
+                        <?php 
 							$total = $total + $record['PkgBasePrice'];
 							$i++; 
 							} 
 						?>
-						 
-			 			<div class="col-md-12 col-lg-4">
-			 				<div class="summary">
-			 					<h3>Summary</h3>
-			 					<div class="summary-item"><span class="text">Subtotal</span><span class="price">$<?php echo $total; ?></span></div>
-			 					<div class="summary-item"><span class="text">Discount</span><span class="price">$0</span></div>
-			 					<div class="summary-item"><span class="text">Total</span><span class="price">$<?php echo $total; ?></span></div>
-			 					<button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
-							 </div>
-						</div>
-						 
-		 			</div> 
-		 		</div>
-	 		</div>
-		</section>
-	</main>
-
-	<!-- FOOTER -->
-	<?php include 'templates/footer.php' ?>
+                    
+                    <!-- <div class="pull-right">
+                        <a href="" class="btn btn-outline-secondary pull-right">
+                            Update shopping cart
+                        </a>
+                    </div> -->
+                </div>
+                <div class="card-footer">
+                    <!-- <div class="coupon col-md-5 col-sm-5 no-padding-left pull-left">
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="text" class="form-control" placeholder="cupone code">
+                            </div>
+                            <div class="col-6">
+                                <input type="submit" class="btn btn-default" value="Use cupone">
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="pull-right" style="margin: 10px">
+                        <a href="" class="btn btn-success pull-right">Checkout</a>
+                        <div class="pull-right" style="margin: 8px">
+                            Total price: <b>$<?php echo $total; ?></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<!-- FOOTER -->
+<?php include 'templates/footer.php' ?>
   
   <!-- Bootstrap JS -->
   <script src="js/app.js"></script>
@@ -112,3 +117,4 @@
 
 </body>
 </html>
+
