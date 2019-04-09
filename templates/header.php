@@ -47,7 +47,7 @@
 						$dropDown .= $_SESSION["userName"];
 						$dropDown .='</a>
 							        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							          <a class="dropdown-item" href="#">Booking</a>
+							          <a class="dropdown-item" href="bookingPage.php">Booking</a>
 							          <a class="dropdown-item" href="cart.php">Cart</a>
 							          <div class="dropdown-divider"></div>
 							          <a class="dropdown-item" id="Logout" href="logout.php">Logout</a>
