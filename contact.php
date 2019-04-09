@@ -158,7 +158,7 @@
         <div class="col-sm-4">
             <div class="team-members">
                 <div class="team-avatar">
-                    <img class="img-responsive" src="http://keenthemes.com/assets/bootsnipp/member1.png" alt="">
+                    <img class="img-responsive" src="images/member1.png" alt="">
                 </div>
                 <div class="team-desc">
                     <h4>Paul Stern</h4>
@@ -169,7 +169,7 @@
         <div class="col-sm-4">
             <div class="team-members">
                 <div class="team-avatar">
-                    <img class="img-responsive" src="http://keenthemes.com/assets/bootsnipp/member2.png" alt="">
+                    <img class="img-responsive" src="images/member2.png" alt="">
                 </div>
                 <div class="team-desc">
                     <h4>Sarah Parker</h4>
@@ -180,7 +180,7 @@
         <div class="col-sm-4">
             <div class="team-members">
                 <div class="team-avatar">
-                    <img class="img-responsive" src="http://keenthemes.com/assets/bootsnipp/member3.png" alt="">
+                    <img class="img-responsive" src="images/member3.png" alt="">
                 </div>
                 <div class="team-desc">
                     <h4>steve Jobs</h4>
