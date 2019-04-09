@@ -33,7 +33,7 @@
 	}
 	include_once('models/connect.php');
 	$date = date("Y-m-d H:i:s");
-	$query = "SELECT * FROM `packages` WHERE `PkgEndDate` > '$date'";
+	$query = "SELECT * FROM `packages` WHERE `PkgEndDate` > '$date' ORDER BY PkgBasePrice DESC ";
 	$results = mysqli_query($connect, $query) or die("database error:". mysqli_error($connect));
 	?>
 
@@ -66,7 +66,7 @@
 							<div class="card-desc">
 								<h3><?php echo $record['PkgName']; ?></h3>
 								<p><?php echo $record['PkgDesc']; ?></p>
-								<p><?php echo $record['PkgStartDate']; ?></p>
+								<p class="startDate"><?php echo $record['PkgStartDate']; ?></p>
 								<p><?php echo $record['PkgEndDate']; ?></p>
 								<a href="addtocart.php?id=<?php echo $record['PackageId']; ?>" class="btn btn-primary" role="button">Add to Cart</a>  
 							</div>
@@ -84,7 +84,6 @@
 
 
 	<script>
-			console.log(date[i]);
 	var today = new Date(Date.now());
 	var datestrike = document.getElementsByClassName("startDate");
 	
@@ -99,7 +98,7 @@
 	}
 
 	</script>
-	
+
 	<!-- FOOTER -->
 	<?php include 'templates/footer.php' ?>
 
