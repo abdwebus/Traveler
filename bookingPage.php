@@ -49,6 +49,7 @@
 	<!-- <link href="cover.css" rel="stylesheet"> -->
 </head>
 <body class="text-center">
+	<?php $title = "BOOKINGS"; ?>
 	<div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
 		<!-- Navbar -->
 		<?php include 'templates/header.php' ?>

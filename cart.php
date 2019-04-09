@@ -15,6 +15,7 @@
   
 </head>
 <body>
+    <?php $title = "CART"; ?>
 	<!-- Navbar -->
 	<?php include 'templates/header.php' ?>
 
@@ -27,8 +28,13 @@
 	}
 	require_once('models/connect.php'); 
 
-	$items = $_SESSION['cart'];
-	$cartitems = explode(",", $items);
+    if(isset($_SESSION['cart'])){
+        $items = $_SESSION['cart'];
+        $cartitems = explode(",", $items);
+    } else {
+        $cartitems = [];
+    }
+	
 	?>
     
     <div class="container">
