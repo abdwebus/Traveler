@@ -15,7 +15,7 @@
 
 .btn-primary {
     color: #fff;
-    background-color: #007b5e;
+    background-color: #02130f;
     border-color: #007b5e;
 }
 
@@ -29,6 +29,7 @@ section .section-title {
     margin-bottom: 50px;
     text-transform: uppercase;
     font-family: Gill Sans Extrabold, sans-serif;
+    color: #007b5e; text-shadow: lightgreen 0.1em 0.1em 0.2em
 }
 
 #team .card {

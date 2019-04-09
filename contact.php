@@ -4,19 +4,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Contact us</title>
 
-	<!-- Custom CSS -->
+	<!-- traveler Custom CSS -->
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/ariel.css">
 	<link rel="stylesheet" type="text/css" href="css/styleliam.css">
 	<link rel="stylesheet" type="text/css" href="css/contact.css">
 	<link rel="stylesheet" type="text/css" href="css/team.css">
+
+	<!-- css for pop text mouse over  -->
+
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	
 	<!-- Bootstrap CSS -->
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	
+	<!-- links for newsletter -->
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	
 	<!-- team agents links -->
 	
@@ -48,8 +61,8 @@
 					<p class="card-text">Office Address: <?php echo $record['AgncyAddress']; ?></p>
 					<p class="card-text">Phone: <?php echo $record['AgncyPhone']; ?></p>
 					<p class="card-text">Fax: <?php echo $record['AgncyFax']; ?></p>
-					 <a href="https://www.google.com/maps/search/calgary+office+travel+experts/@51.0118819,-114.208797,11z/data=!3m1!4b1" class="btn btn-primary">Map Location</a>
-					 
+					<a href="https://bit.ly/2I9On86" class="btn btn-primary" id="show-option" title="click here for map location"><i class="icon-edit icon-white">Calgary Downtown location</i></a>
+					<a href="https://bit.ly/2I9On86" class="btn btn-primary" id="show-option" title="click here for map location"><i class="icon-edit icon-white">Okotoks Downtown Location</i></a>
 				</div>
 			</div>
 		<?php } ?>
@@ -129,6 +142,9 @@
 </section>
  <!-- insert map here -->
 <section class="container">
+
+<!-- team traveler -->
+
 <div class="container content">
     <div class="heading">
         <h2>Our <strong>Great Team</strong></h2>
@@ -181,6 +197,30 @@
 <br>
 <!-- This live preview for <a href="http://en.wikipedia.org/">Wikipedia</a><div class="box"><iframe src="http://en.wikipedia.org/" width = "500px" height = "500px"></iframe></div> remains open on mouseover. -->
 </section>
+<section class="subscribe-area pb-50 pt-70">
+<div class="container">
+	<div class="row">
+
+					<div class="col-md-4">
+						<div class="subscribe-text mb-15">
+							<span>JOIN OUR NEWSLETTER</span>
+							<h2>subscribe newsletter</h2>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="subscribe-wrapper subscribe2-wrapper mb-15">
+							<div class="subscribe-form">
+								<form action="#">
+									<input placeholder="enter your email address" type="email">
+									<button>subscribe <i class="fas fa-long-arrow-alt-right"></i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+</div>
+</section>
 <!-- Team -->
 
 	<!-- FOOTER -->
@@ -198,6 +238,16 @@
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- mouse over -->
+	<script>
+	$(function() {
+		$( "#show-option" ).tooltip({
+			show: {
+			effect: "slideDown",
+			delay: 300
+			}
+		});
+	});
+	</script>
 
 </body>
 </html>
