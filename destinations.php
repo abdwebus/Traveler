@@ -20,9 +20,11 @@
 
 	<!-- Subheader -->
 	<?php include 'templates/subheader.php' ?>
-
+  
   <?php
-  // session_start();
+  if (session_status() == PHP_SESSION_NONE) {
+      session_start();
+  }
   include_once('models/connect.php');
   $date = date("Y-m-d H:i:s");
   $query = "SELECT * FROM `packages` WHERE `PkgEndDate` > '$date'";
@@ -42,31 +44,36 @@
   ?>
   </div>
 
-  <div class="row card-deck cardpadding">
+  <section class="details-card">
+    <div class="container">
+        <div class="row">
 
-  <?php
-  while($record = mysqli_fetch_assoc($results) ) {
-  ?>
-    <div class="col-lg-4 col-sm-6 mb-4">
-      <div class="card">
-        <a href="#"><img class="card-img-top" src="<?php echo $record['PkgImgUrl']; ?>" alt=""></a>
-        <div class="card-body">
-          <h5 class="card-title"><?php echo $record['PkgName']; ?></h5>
-          <p class="card-text"><?php echo $record['PkgDesc']; ?></p>
-        </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><?php echo $record['PkgStartDate']; ?></li>
-            <li id="myelement" class="list-group-item"><?php echo $record['PkgEndDate']; ?></li>
-            <li class="list-group-item"><?php echo $record['PkgBasePrice']; ?></li>
-          </ul>
-          <a href="addtocart.php?id=<?php echo $record['PackageId']; ?>" class="btn btn-primary" role="button">Add to Cart</a>
-      </div>
-    </div>
+        <?php
+        while($record = mysqli_fetch_assoc($results) ) {
+        ?>
+            <div class="col-md-4">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="<?php echo $record['PkgImgUrl']; ?>" alt="Travel Image">
+                        <span><h4>$<?php echo $record['PkgBasePrice']; ?></h4></span>
+                    </div>
+                    <div class="card-desc">
+                        <h3><?php echo $record['PkgName']; ?></h3>
+                        <p><?php echo $record['PkgDesc']; ?></p>
+                        <p><?php echo $record['PkgStartDate']; ?></p>
+                        <p><?php echo $record['PkgEndDate']; ?></p>
+                        <a href="addtocart.php?id=<?php echo $record['PackageId']; ?>" class="btn btn-primary" role="button">Add to Cart</a>  
+                    </div>
+                </div>
+            </div>
+            
+            <?php 
+            } 
+            ?>
     
-  <?php 
-  } 
-  ?>
-  </div>
+        </div>
+    </div>
+</section>
 
   
 

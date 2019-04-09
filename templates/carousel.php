@@ -10,9 +10,9 @@
 		<img src="images/13585.jpg" alt="...">
 			<div class="container">
 				<div class="carousel-caption text-left">
-					<h3>TRAVELER</h3>
-					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-					<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+					<h3>SWITZERLAND</h3>
+					<p>Visit a European country known for its alpine scenery, vast freshwater lakes, picturesque cities, chocolate and cheeses. Experience the cultures and traditions of different language communities.</p>
+					<p><a class="btn btn-lg btn-primary" href="destinations.php" role="button">Explore Now</a></p>
 				</div>
 			</div>
 		</div>
@@ -21,9 +21,9 @@
 			<img src="images/13589.jpg" alt="...">
 			<div class="container">
 				<div class="carousel-caption">
-					<h3>TRAVELER</h3>
-					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-					<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+					<h3>IRELAND</h3>
+					<p>Explore a Neolithic tomb, walk along rocky cliffs as waves crash below or just enjoy a laugh with the locals in this long-inhabited island nation.</p>
+					<p><a class="btn btn-lg btn-primary" href="destinations.php" role="button">Explore Now</a></p>
 				</div>
 			</div>
 		</div>
@@ -32,9 +32,9 @@
 		<img src="images/306372.jpg" alt="...">
 			<div class="container">
 				<div class="carousel-caption text-right">
-					<h3>TRAVELER</h3>
-					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-					<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+					<h3>GREECE</h3>
+					<p>Learn about the roots of Western civilization and build a nice tan on a Mediterranean island in this ancient southeastern European nation.</p>
+					<p><a class="btn btn-lg btn-primary" href="destinations.php" role="button">Explore Now</a></p>
 				</div>
 			</div>
 		</div>

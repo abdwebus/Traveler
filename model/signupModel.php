@@ -15,12 +15,22 @@ if (isset($_POST)){
 		}
 		$credentialID = createCredential($connect, $_POST);
 		createCustomer($connect, $_POST, $credentialID);
+		$customerInfo = getUserInfo($connect, $credentialID);
 		mysqli_close($connect);
 		session_Start();
 		$_SESSION['userid'] = $credentialID;
+		$_SESSION['userName'] = $customerInfo['CustFirstName'];
+		$_SESSION['userRole'] = 'customer';
 		header('Location: ../index.php');
 		exit;
 	}
+}
+
+function getUserInfo($db, $credentialID){
+	$sql = "SELECT * FROM customers WHERE credentialID = '$credentialID'";
+	$customerResult = mysqli_query($db, $sql);
+	$customerRow = mysqli_fetch_assoc($customerResult);
+	return $customerRow;
 }
 
 function createCustomer($db, $post, $credentialID){

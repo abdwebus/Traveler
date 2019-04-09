@@ -42,7 +42,19 @@
 				<li><a href="cart.php">CART</a></li>
 				<?php 
 					if(isset($_SESSION['userid'])){
-						echo "<li><a style='cursor: pointer;' id='Logout' href='logout.php'>LOGOUT</a></li>";
+						$dropDown = '<li class="nav-item dropdown">
+							        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+						$dropDown .= $_SESSION["userName"];
+						$dropDown .='</a>
+							        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							          <a class="dropdown-item" href="bookingPage.php">Booking</a>
+							          <a class="dropdown-item" href="cart.php">Cart</a>
+							          <div class="dropdown-divider"></div>
+							          <a class="dropdown-item" id="Logout" href="logout.php">Logout</a>
+							        </div>
+							      </li>';
+						
+						echo $dropDown;
 					} else {
 						echo "<li><a style='cursor: pointer;' id='signup' onclick='showSignup()'>REGISTER</a></li>";
 						echo "<li><a style='cursor: pointer;' id='login' onclick='showLogin()'>LOGIN</a></li>";
