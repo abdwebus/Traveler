@@ -21,7 +21,7 @@
 	<?php include 'templates/subheader.php' ?>
 
     <!-- Form -->
-		<article class="centerDiv">
+		<article class="centerDiv container">
 			<div class="jumbotron centerDiv">
 				<h1 class="display-4">Travel Package Entry</h1>
 				<hr class="my-4">
@@ -59,7 +59,7 @@
 					<input type="submit" name="submit" data-rel="back" class="btn btn-primary btn-lg btn-block">
                 </form> 
             </div>
-        
+        </article>
   	<!-- FOOTER -->
   	<?php include 'templates/footer.php' ?>
 
