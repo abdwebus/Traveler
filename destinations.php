@@ -84,12 +84,22 @@
 
 
 	<script>
-		var date = document.getElementById("myelement").innerHTML;
-		for(i = 0; i < date.length; i++) {
 			console.log(date[i]);
-		}
-	</script>
+	var today = new Date(Date.now());
+	var datestrike = document.getElementsByClassName("startDate");
+	
+	// datestrike.style.setProperty("text-decoration", "line-through");
 
+	for(i = 0; i < datestrike.length; i++) {
+		var startDate = new Date (document.getElementsByClassName("startDate")[i].innerText);
+		console.log(startDate);
+		if(startDate>today) {
+		datestrike[i].style.cssText = "text-decoration: line-through red";
+		}
+	}
+
+	</script>
+	
 	<!-- FOOTER -->
 	<?php include 'templates/footer.php' ?>
 
