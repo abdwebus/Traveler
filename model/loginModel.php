@@ -6,11 +6,7 @@ if(isset($_POST)){
 	$email = $_POST['email'];
 
 	// Create DB connection
-	$connect = mysqli_connect('localhost', 'agent', '', 'travelexperts');
-	if (!$connect) {
-		die(mysql_error());
-	}
-
+    include 'dbConnection.php';
 	$sql = "SELECT * FROM credentials WHERE email = '$email'";
     $result=mysqli_query($connect, $sql);
     $row = mysqli_fetch_assoc($result);
