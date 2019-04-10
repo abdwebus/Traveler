@@ -24,14 +24,13 @@ function login(event){
 		url: 'model/loginModel.php',
 		type: "POST",
 		data: {
-		email: $('#loginEmail').val(),
-		password: $('#loginPassword').val(),
+			email: $('#loginEmail').val(),
+			password: $('#loginPassword').val(),
 		},
 		dataType: "html"
 	});
 
 	request.done(function(msg) {
-		console.log(msg);
 		password = document.getElementById('loginPassword');
 		email = document.getElementById('loginEmail');
 		if(msg === 'err'){
@@ -132,17 +131,32 @@ function nextPrev(n) {
 	var x = document.getElementsByClassName("tab");
 	// Exit the function if any field in the current tab is invalid:
 	if (n == 1 && !validateForm()) return false;
-	// Hide the current tab:
-	x[currentTab].style.display = "none";
-	currentTab = currentTab + n;
-	// if you have reached the end of the form... :
-	if (currentTab >= x.length) {
-		//...the form gets submitted:
-		document.getElementById("regForm").submit();
-		return false;
-	} 
-	// Otherwise, display the correct tab:
-	showTab(currentTab);
+
+	if (currentTab == 0){
+		validateEmailAvailability(function(result){
+			if(result) {
+				// Hide the current tab:
+				x[currentTab].style.display = "none";
+				currentTab = currentTab + n;
+				showTab(currentTab);
+			} else {
+				return;
+			}
+		});
+	} else {
+		// Hide the current tab:
+		x[currentTab].style.display = "none";
+		currentTab = currentTab + n;
+		// if you have reached the end of the form... :
+		if (currentTab >= x.length) {
+			signupModal.style.display='none';
+			//...the form gets submitted:
+			document.getElementById("regForm").submit();
+			return false;
+		} 
+		// Otherwise, display the correct tab:
+		showTab(currentTab);
+	}
 }
 
 function validateForm() {
@@ -208,6 +222,33 @@ function validateForm() {
 	return result; // return the valid status
 }
 
+function validateEmailAvailability(callback){
+	var request = $.ajax({
+		url: 'model/emailAvailability.php',
+		type: "POST",
+		data: {
+			email: $('#InputEmail').val(),
+		},
+		dataType: "html"
+	});
+
+	request.done(function(msg) {
+		email = document.getElementById('InputEmail');
+		if(msg === 'err'){
+			document.getElementById('emailNotAvailable').style.display = 'block';
+			callback(false);
+		}
+		if(msg === 'success'){
+			document.getElementById('emailNotAvailable').style.display = 'none';
+			callback(true);	
+		}
+	});
+
+	request.fail(function(jqXHR, textStatus) {
+		alert( "Request failed: " + textStatus );
+	});
+}
+
 function fixStepIndicator(n) {
 	var i, x = document.getElementsByClassName("step");
 	for (i = 0; i < x.length; i++) {
@@ -223,6 +264,7 @@ function validateEmail(email){
 		return true;
 	} else {
 		flagAsInvalid(email);
+		document.getElementById('emailNotAvailable').style.display = 'none';
 		return false;
 	}
 }
