@@ -1,4 +1,7 @@
 <?php
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
     include 'connect.php';
 
     // random string generator
@@ -8,10 +11,11 @@
 
     $BookingDate = date("Y-m-d H:i:s");
     $BookingNo = $randomString;
-    $TravelerCount = 
-    $CustomerId = 
-    $TripTypeId = 
-    $PackageId = 
+    $TravelerCount = 2;
+    $CustomerId = $_SESSION['userid'];
+    $TripTypeId = "L";
+    $PackageId = $_SESSION['cart'];
+    var_dump($BookingDate, $BookingNo, $TravelerCount, $CustomerId, $TripTypeId, $PackageId);
     $sql = "INSERT INTO bookings (BookingDate, BookingNo, TravelerCount, CustomerId, TripTypeId, PackageId)
     VALUES ('$BookingDate', '$BookingNo', '$TravelerCount', '$CustomerId', '$TripTypeId', '$PackageId')";
     if ($connect->query($sql) === TRUE) {
