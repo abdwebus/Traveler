@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<link rel="stylesheet" type="text/css" href="css/ariel.css">
 	<link rel="stylesheet" type="text/css" href="css/contact.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 
 	<!-- Bootstrap CSS -->
@@ -34,7 +35,7 @@
 
 		<div class="container marketing">
 			<!-- Contact Us -->
-			<?php include 'templates/rowContactUs.php' ?>
+			<?php include 'templates/services.php' ?>
 
 			<hr class="featurette-divider">
 			

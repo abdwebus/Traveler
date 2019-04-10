@@ -21,6 +21,8 @@
 
 </head>
 <body>
+
+<?php $title = 'About'; ?>
 	<Header>
     	<?php include 'templates/header.php' ?>
 		<?php include 'templates/subheader.php' ?>

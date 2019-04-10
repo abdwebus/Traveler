@@ -1,6 +1,6 @@
 
 
-/*styleliam.css*/
+/*footer design*/
 .footer-distributed{
 	background-color: #292c2f;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -18,7 +18,7 @@
 	table-layout: inherit;
 	text-align: center;
 	margin-top: 40px;
-	background-color: #5383d3;
+	background-color: #007bff;
 	
 
 }
@@ -112,12 +112,12 @@
 .footer-distributed .footer-center p a{
 	color:  #007bff;
 	text-decoration: none;;
-}
+} */
 
 
-/* Footer Right */
+/* Footer Right  */
 
-/* .footer-distributed .footer-right{
+.footer-distributed .footer-right{
 	width: 20%;
 }
 
@@ -135,9 +135,9 @@
 	font-size: 14px;
 	font-weight: bold;
 	margin-bottom: 20px;
-} */
+}
 
-/* .footer-distributed .footer-icons{
+ .footer-distributed .footer-icons{
 	margin-top: 25px;
 }
 
@@ -156,7 +156,7 @@
 
 	margin-right: 3px;
 	margin-bottom: 5px;
-} */
+}
 
 
 /* If you don't want the footer to be responsive, remove these media queries */
