@@ -110,7 +110,7 @@
 }
 
 .footer-distributed .footer-center p a{
-	color:  #007bff;
+	color:  white;
 	text-decoration: none;;
 } */
 
@@ -131,7 +131,7 @@
 
 .footer-distributed .footer-company-about span{
 	display: block;
-	color:  #ffffff;
+	color:  white;
 	font-size: 14px;
 	font-weight: bold;
 	margin-bottom: 20px;
@@ -150,7 +150,7 @@
 	border-radius: 2px;
 
 	font-size: 20px;
-	color: #ffffff;
+	color: white;
 	text-align: center;
 	line-height: 35px;
 

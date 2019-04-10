@@ -33,8 +33,6 @@
 				</p>
 
 				<p class="footer-company-name">The Traveler &copy; 2019-2020</p>
-				<img height="95" width="95" src="https://www.emirates.com/ca/english/images/Apple_EN_tcm302-4143604.svg">
-				<img height="95" width="95" src="https://www.emirates.com/ca/english/images/Google_EN_tcm302-4143606.svg">
 			</div>
 			
 			<div class="footer-center">
@@ -73,8 +71,10 @@
 					<a href="#"><i class="fa fa-linkedin"></i></a>
 					<a href="#"><i class="fa fa-github"></i></a>
 				<div>
-				<img height="95" width="95" src="https://www.emirates.com/ca/english/images/Apex_Badge_EN_tcm302-5456919.svg">
-				<img height="50" width="50" src="images/bestvacations.png">
+				<img height="95" width="95" src="https://www.emirates.com/ca/english/images/Apple_EN_tcm302-4143604.svg">
+				<img height="95" width="95" src="https://www.emirates.com/ca/english/images/Google_EN_tcm302-4143606.svg">
+				<!-- <img height="95" width="95" src="https://www.emirates.com/ca/english/images/Apex_Badge_EN_tcm302-5456919.svg">
+				<img height="50" width="50" src="images/bestvacations.png"> -->
 				
 				
 				</div>
