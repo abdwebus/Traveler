@@ -4,12 +4,25 @@
 var loginModal = document.getElementById('modal-wrapper');
 var signupModal = document.getElementById('signupModal-wrapper');
 var currentTab = 0; // Current tab is set to be the first tab (0)
-// window.onclick = function(event) {
-// 	if (event.target == modal) {
-// 		modal.style.display = "none";
-// 	}
-// }
 
+// Create event handler on the login window close button
+document.getElementById('loginCloseButton').addEventListener('click', function(){
+	hideLogin();
+});
+
+// Create event handler on the signup window close button
+document.getElementById('signupCloseButton').addEventListener('click', function(){
+	hideSignup();
+});
+
+/**
+ * Summary.
+ *
+ * @param {type}	var 	Description
+ * @param {type}	var 	Description
+ *
+ * @return {type}	Description
+ */
 function login(event){
 	email = document.getElementById('loginEmail');
 	password = document.getElementById('loginPassword');
@@ -49,28 +62,31 @@ function login(event){
 	});
 }
 
-
-document.getElementById('loginCloseButton').addEventListener('click', function(){
-	hideLogin();
-});
-
-document.getElementById('signupCloseButton').addEventListener('click', function(){
-	hideSignup();
-});
-
+/**
+ * Show signup window.
+ */
 function showSignup(){
 	showTab(currentTab); // Display the current tab
 	signupModal.style.display='block';
 }
 
+/**
+ * Show the login window.
+ */
 function showLogin(){
 	loginModal.style.display='block';
 }
 
+/**
+ * Hide the login window.
+ */
 function hideLogin(){
 	loginModal.style.display='none';
 }
 
+/**
+ * Hide signup window and reset all values to default.
+ */
 function hideSignup(){
 	signupModal.style.display='none';
 	resetSignup();
@@ -78,7 +94,9 @@ function hideSignup(){
 
 
 
-// Reset signup form to its default status
+/**
+ * Reset signup form to its default status.
+ */
 function resetSignup() {
 	currentTab = 0;
 
@@ -110,6 +128,14 @@ function resetSignup() {
 	}
 }
 
+/**
+ * Summary.
+ *
+ * @param {type}	var 	Description
+ * @param {type}	var 	Description
+ *
+ * @return {type}	Description
+ */
 function showTab(n) {
 	var x = document.getElementsByClassName("tab");
 	x[n].style.display = "block";
@@ -127,6 +153,14 @@ function showTab(n) {
 	fixStepIndicator(n)
 }
 
+/**
+ * Summary.
+ *
+ * @param {type}	var 	Description
+ * @param {type}	var 	Description
+ *
+ * @return {type}	Description
+ */
 function nextPrev(n) {
 	var x = document.getElementsByClassName("tab");
 	// Exit the function if any field in the current tab is invalid:
@@ -159,6 +193,14 @@ function nextPrev(n) {
 	}
 }
 
+/**
+ * Summary.
+ *
+ * @param {type}	var 	Description
+ * @param {type}	var 	Description
+ *
+ * @return {type}	Description
+ */
 function validateForm() {
 	var x, y, i, valid = true, result = true;
 	x = document.getElementsByClassName("tab");
@@ -222,6 +264,14 @@ function validateForm() {
 	return result; // return the valid status
 }
 
+/**
+ * Summary.
+ *
+ * @param {type}	var 	Description
+ * @param {type}	var 	Description
+ *
+ * @return {type}	Description
+ */
 function validateEmailAvailability(callback){
 	var request = $.ajax({
 		url: 'model/emailAvailability.php',
@@ -249,6 +299,14 @@ function validateEmailAvailability(callback){
 	});
 }
 
+/**
+ * Summary.
+ *
+ * @param {type}	var 	Description
+ * @param {type}	var 	Description
+ *
+ * @return {type}	Description
+ */
 function fixStepIndicator(n) {
 	var i, x = document.getElementsByClassName("step");
 	for (i = 0; i < x.length; i++) {
@@ -258,6 +316,15 @@ function fixStepIndicator(n) {
 	x[n].className += " active";
 }
 
+/**
+ * Verifies whether the passed element valid email address.
+ *
+ * Verifies and flag the element as invalid or valid accordingly. 
+ *
+ * @param {HTML element} email The element that has the value to verifiy
+ *
+ * @return {bool}	Whether it is valid email address
+ */
 function validateEmail(email){
 	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)){
 		flagAsValid(email);
@@ -269,6 +336,16 @@ function validateEmail(email){
 	}
 }
 
+/**
+ * Verifies whether the password and confirm password match and not empty.
+ *
+ * Verifies and flag the element as invalid or valid accordingly. 
+ *
+ * @param {HTML element} password The element that has the password valud
+ * @param {HTML element} confirmPassword The element that has the confirm password value
+ *
+ * @return {bool}	Whether password is valid
+ */
 function validatePassword(password, confirmPassword){
 	if (password.value === '' || confirmPassword.value === ''){
 		flagAsInvalid(password);
@@ -287,6 +364,15 @@ function validatePassword(password, confirmPassword){
 	}
 }
 
+/**
+ * Verifies whether the passed element has ten digits phone number.
+ *
+ * Verifies and flag the element as invalid or valid accordingly. 
+ *
+ * @param {HTML element} phoneNumber The element that has the value to verifiy
+ *
+ * @return {bool}	Whether it has ten digits
+ */
 function validatePhoneNumber(phoneNumber){
 	if(/^\d{10}$/.test(phoneNumber.value)){
 		flagAsValid(phoneNumber);
@@ -297,6 +383,15 @@ function validatePhoneNumber(phoneNumber){
 	}
 }
 
+/**
+ * Verifies whether the passed element has content.
+ *
+ * Verifies and flag the element as invalid or valid accordingly. 
+ *
+ * @param {HTML element} element The element that has the value to verifiy
+ *
+ * @return {bool}	Whether it has content
+ */
 function hasContent(element){
 	if (element.value === ''){
 		flagAsInvalid(element);
@@ -307,6 +402,15 @@ function hasContent(element){
 	}
 }
 
+/**
+ * Verifies the passed element has only alpha characters.
+ *
+ * Verifies and flag the element as invalid or valid accordingly. 
+ *
+ * @param {HTML element} element The element that has the value to verifiy
+ *
+ * @return {bool}	Whether is alpha or not
+ */
 function isAlpha(element){
 	if(/\d/.test(element.value)){
 		flagAsInvalid(element);
@@ -317,6 +421,15 @@ function isAlpha(element){
 	}
 }
 
+/**
+ * Verifies zipcode matches Canadian zipcode formatting.
+ *
+ * Verifies and flag the element as invalid or valid accordingly. 
+ *
+ * @param {HTML element} element The element that has the zipcode value
+ *
+ * @return {bool}	Whether valid or invalid
+ */
 function validateZipCode(element){
 	if(/^[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d$/.test(element.value)){
 		flagAsValid(element);
@@ -327,12 +440,22 @@ function validateZipCode(element){
 	}
 }
 
+/**
+ * Change the css of the passed element to .is-valid.
+ *
+ * @param {HTML element} element The element we want to flag as valid
+ */
 function flagAsValid(element){
 	element.classList.remove("is-invalid");
 	element.classList.remove("is-valid");
 	element.classList.add("is-valid");
 }
 
+/**
+ * Change the css of the passed element to .is-invalid.
+ *
+ * @param {HTML element} element The element we want to flag as invalid
+ */
 function flagAsInvalid(element){
 	element.classList.remove("is-invalid");
 	element.classList.remove("is-valid");

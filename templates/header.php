@@ -1,4 +1,6 @@
 <?php 
+	// Author: Abdulwahab Alansari | Ariel 
+
 	session_Start();
 ?>
 <header>
@@ -15,14 +17,19 @@
 				<li><a href="destinations.php">DESTINATIONS</a></li>
 				<li><a href="contact.php">CONTACT</a></li>
 				<?php 
+					// When user is loged in show related navbar items
 					if(isset($_SESSION['userid'])){
 						$dropDown = '<li class="nav-item dropdown">
 							        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
 						$dropDown .= $_SESSION["userName"];
 						$dropDown .='</a><div class="dropdown-menu" aria-labelledby="navbarDropdown">';
+						
+						// When user is admin, show admin link
 						if($_SESSION['userRole'] == 'admin') {
 							$dropDown .= '<a class="dropdown-item" href="packages.php">Admin</a>';
-						} else {
+						} 
+						// Else show booking and cart links
+						else {
 							$dropDown .= '<a class="dropdown-item" href="bookingPage.php">Booking</a>
 							          	<a class="dropdown-item" href="cart.php">Cart</a>';
 						}
