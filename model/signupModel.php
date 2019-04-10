@@ -9,10 +9,7 @@ if (isset($_POST)){
 		include 'classes.php';
 
 		// Create DB connection
-		$connect = mysqli_connect('localhost', 'agent', '', 'travelexperts');
-		if (!$connect) {
-			die(mysql_error());
-		}
+		include 'dbConnection.php';
 		$credentialID = createCredential($connect, $_POST);
 		createCustomer($connect, $_POST, $credentialID);
 		$customerInfo = getUserInfo($connect, $credentialID);
@@ -34,7 +31,7 @@ function getUserInfo($db, $credentialID){
 }
 
 function createCustomer($db, $post, $credentialID){
-	$AGENTID = 10; //online agent
+	$AGENTID = 20; //online agent
 	$customer = createCustomerObject($post);
 
 	$firstName = $customer->getFirstName();
