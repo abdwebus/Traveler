@@ -27,9 +27,8 @@
 		<?php include 'templates/subheader.php' ?>
     </header>
 <main>
-<h1 class="h1style">FAQ’s</h1>
-
 <div class="container">
+<h1 class="h1style">FAQ’s</h1>
 <p class="para1">
 
 <p class="para3">1. Where can I learn about travel advisories?</p>

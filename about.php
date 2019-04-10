@@ -28,8 +28,9 @@
 		<?php include 'templates/subheader.php' ?>
     </header>
 <main>
-<h1 class="h1style">About Travel Experts</h1>
+
 <div class="container">
+<h1 class="h1style">About Travel Experts</h1>
 <p class="para1">     Travel Experts has been a premier travel design firm since 1989, made up of only the industry’s premium travel counselors. Travel Experts Agents are experienced professionals who operate as independent contractors, fully embracing the entrepreneurial spirit of their individual businesses. They have the travel expertise and business acumen needed to enable them to work independently while at the same time enjoying the advantages of associating with a nationally recognized premier agency. What this means to you, the customer, is the best possible service and attention because it is in their best interest to have you as a satisfied client.
 
 Through our membership in Virtuoso, an invitation only network of the world's best travel agencies, we can offer you our personal relationships with the top hotels, resorts, spas, lodges, airline, cruise lines and tour companies to provide you with incredible values and rare experiences - from complimentary upgrades and amenities to special recognition and privileged access.
