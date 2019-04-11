@@ -23,7 +23,11 @@
 				<p class="footer-links">
 					<a href="index.php">Home</a>
 					·
+<<<<<<< HEAD
 					<a href="#">Support 24/7</a>
+=======
+					<a href="destinations.php">Packages</a>
+>>>>>>> e2a86a69d43152793dbc742f44e36b6c975113ac
 					·
 					<a href="about.php">About</a>
 					·

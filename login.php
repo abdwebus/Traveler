@@ -6,7 +6,6 @@
 			<img class="mb-4" src="images/Logo.png" alt="" width="75" height="54">
 			<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 		</div>
-		<!-- <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1> -->
 		<div class="form-group">
 			<label for="loginEmail" class="sr-only">Email address</label>
 			<input type="email" id="loginEmail" class="form-control" placeholder="Email address" required autofocus name="email">

@@ -1,3 +1,4 @@
+<!-- <hr class="featurette-divider"> -->
 <div class="row featurette">
 	<div class="col-md-7">
 		<h2 class="featurette-heading"><?php echo $row['PkgName'];  ?></h2>

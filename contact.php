@@ -52,7 +52,18 @@
 	<?php include 'signup.php' ?>
 
 	<main class="container">
+<<<<<<< HEAD
 		
+=======
+	<div class="row d-flex justify-content-center pb-70">
+	<div class="menu-content col-lg-8">
+		<div class="title text-center">
+			<h1 class="mb-10">Travel Agencies</h1>
+			<p class="lightertext">Where Customers Come First</p>
+		</div>
+	</div>
+	</div>
+>>>>>>> e2a86a69d43152793dbc742f44e36b6c975113ac
 		<!-- agencies -->
 		<?php
 		include_once("models/connect.php");
@@ -61,14 +72,14 @@
 		?>
 		<div class="row">
 			<?php while( $record = mysqli_fetch_assoc($results) ) { ?>  
-				<div class="card" style="width: 45%;">
+				<div class="card card-content" style="width: 45%;">
 					<img class="card-img-top" src="<?php echo $record['AgcImg']; ?>" alt="Card image cap">
 					<div class="card-body">
 						<h3 class="card-title2"><?php echo $record['AgncyCity']; ?>, <?php echo $record['AgncyCountry']; ?></h3>
 						<p class="card-text">Office Address: <?php echo $record['AgncyAddress']; ?></p>
 						<p class="card-text">Phone: <?php echo $record['AgncyPhone']; ?></p>
 						<p class="card-text">Fax: <?php echo $record['AgncyFax']; ?></p>
-						<a href="https://bit.ly/2I9On86" class="btn btn-primary" id="show-option" title="click here for map location"><i class="icon-edit icon-white"><?php echo $record['AgncyCity']; ?></i></a>
+						<a href="https://bit.ly/2I9On86" class="btn btn-lg btn-primary" id="show-option" title="click here for map location"><i class="icon-edit icon-white"><?php echo $record['AgncyCity']; ?></i></a>
 						<!-- <a href="https://bit.ly/2I9On86" class="btn btn-primary" id="show-option" title="click here for map location"><i class="icon-edit icon-white">Okotoks Downtown Location</i></a> -->
 					</div>
 				</div>
@@ -91,7 +102,14 @@
 
 	<section id="team" class="pb-5">
 		<div class="container">
-			<h5 class="section-title h1">Travel Agent Team</h5>
+		<div class="row d-flex justify-content-center pb-70">
+		<div class="menu-content col-lg-8">
+			<div class="title text-center">
+				<h1 class="mb-10">Travel Agents</h1>
+				<p class="lightertext">Your Guides To Your Dream Getaway</p>
+			</div>
+		</div>
+		</div>
 			<div class="row">
 				<?php while( $record = mysqli_fetch_assoc($results) ){?>
 					<!-- Team member -->

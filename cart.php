@@ -105,7 +105,7 @@
                         </div>
                     </div> -->
                     <div class="pull-right" style="margin: 10px">
-                        <a href="" class="btn btn-success pull-right">Checkout</a>
+                        <a href="models/cartinsert.php" class="btn btn-success pull-right">Checkout</a>
                         <div class="pull-right" style="margin: 8px">
                             Total price: <b>$<?php echo $total; ?></b>
                         </div>

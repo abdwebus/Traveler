@@ -14,6 +14,12 @@
 				<label for="InputEmail1" class="sr-only">Email address</label>
 				<input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
 				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				<div class="invalid-feedback">
+					Email is invalid!
+				</div>
+				<div id="emailNotAvailable" style="display: none; color: red;">
+					Email is already exist!
+				</div>
 			</div>
 			<div class="form-group">
 				<input type="password" class="form-control" id="signupPassword" placeholder="Password" name="password" required>
