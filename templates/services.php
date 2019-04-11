@@ -1,9 +1,13 @@
+<div class="row d-flex justify-content-center">
+	<div class="menu-content pb-70 col-lg-8">
+		<div class="title text-center">
+			<h1 class="mb-10">Traveler Services</h1>
+			<p class="lightertext">Find Out What Makes Us Unique</p>
+		</div>
+	</div>
+</div>
 <div class="features-clean">
-			<div class="container">
-					<div class="intro">
-							<h2 class="text-center">Traveler Services</h2>
-							<p class="text-center">World class destinations at competitive prices</p>
-					</div>
+			<div class="container mb-0">
 					<div class="row features">
 							<div class="col-sm-6 col-lg-4 item"><i class="fa fa-plane icon"></i>
 									<h3 class="name">Flights</h3>

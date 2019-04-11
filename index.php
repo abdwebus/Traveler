@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<link rel="stylesheet" type="text/css" href="css/ariel.css">
-	<link rel="stylesheet" type="text/css" href="css/contact.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/contact.css"> -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 
@@ -33,14 +33,21 @@
 		<?php include 'templates/carousel.php' ?>
 
 
-		<div class="container marketing">
-			<!-- Contact Us -->
+		<div class="container marketing section-gap">
+			<!-- Services -->
 			<?php include 'templates/services.php' ?>
+		</div>
 
+		<div class="container marketing section-gap">
+			<!-- Packages -->
+			<?php include 'templates/titletext.php' ?>
 			<hr class="featurette-divider">
-			
 			<?php include 'templates/bestPackages.php' ?>
+		</div>
 
+		<div class="container marketing pb-70">
+			<!-- Packages -->
+			<?php include 'templates/testimonials.php' ?>
 		</div>
 
 

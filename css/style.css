@@ -20,9 +20,22 @@ html, body {
 }
 
 body {
-	font-family: "Helvetica Neue",sans-serif;
+	font-family: "Poppins",sans-serif;
 	font-weight: lighter;
 }
 
+.pb-70 {
+    padding-bottom: 70px;
+}
 
+.section-gap {
+    padding: 100px 0;
+}
 
+.mb-0 {
+	margin-bottom: 0px;
+}
+
+.lightertext {
+	color:#7d8285;
+}
