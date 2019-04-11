@@ -23,7 +23,7 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	>
 	
 	<!-- links for newsletter -->
 	
@@ -35,8 +35,8 @@
 	<!-- team agents links -->
 	
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+
 </head>
 <body>
 	<?php $title = 'CONTACT US'; ?>
@@ -45,13 +45,14 @@
 		<?php include 'templates/subheader.php' ?>
 	</header>
 	<section>
-
+		<h1 class="section-title h1">Agency</h1>
 	</section>	
 	<!-- Login -->
 	<?php include 'login.php' ?>
 	<?php include 'signup.php' ?>
 
 	<main class="container">
+		
 		<!-- agencies -->
 		<?php
 		include_once("models/connect.php");
@@ -202,7 +203,6 @@
 			<br>
 			<br>
 		</section>
-
 		<!-- email newsletter -->
 
 		<section class="subscribe-area pb-50 pt-70">

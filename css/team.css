@@ -34,7 +34,7 @@ section .section-title {
     margin-bottom: 50px;
     text-transform: uppercase;
     font-family: Gill Sans Extrabold, sans-serif;
-    color: #007bff; text-shadow: lightblue 0.1em 0.1em 0.2em
+    color: black; text-shadow: lightblue 0.1em 0.1em 0.2em
 }
 
 #team .card {

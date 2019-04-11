@@ -71,49 +71,6 @@
 	margin: 0;
 }
 
-/* Footer Center */
-
-.footer-distributed .footer-center{
-	width: 35%;
-}
-
-.footer-distributed .footer-center i{
-	background-color:  #33383b;
-	color: #ffffff;
-	font-size: 25px;
-	width: 38px;
-	height: 38px;
-	border-radius: 50%;
-	text-align: center;
-	line-height: 42px;
-	margin: 10px 15px;
-	vertical-align: middle;
-}
-
-.footer-distributed .footer-center i.fa-envelope{
-	font-size: 17px;
-	line-height: 38px;
-}
-
-.footer-distributed .footer-center p{
-	display: inline-block;
-	color: #007bff;
-	vertical-align: middle;
-	margin:0;
-}
-
-.footer-distributed .footer-center p span{
-	display:block;
-	font-weight: normal;
-	font-size:14px;
-	line-height:2;
-}
-
-.footer-distributed .footer-center p a{
-	color:  #007bff;
-	text-decoration: none;;
-}
-
 
 /* Footer Right */
 
@@ -289,6 +246,12 @@
 			position: relative;
 			z-index: 100;
 		}
+
+		.h2-style {
+			text-align: center;
+			
+
+		}
 		
 		/* hover on image agency */
 
@@ -296,7 +259,7 @@
 			padding-top: 30px;
 		}
 		
-		/* Heading */
+		/* Heading team*/
 		.heading {
 			z-index: 1;
 			position: relative;

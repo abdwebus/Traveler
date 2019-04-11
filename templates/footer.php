@@ -23,7 +23,7 @@
 				<p class="footer-links">
 					<a href="index.php">Home</a>
 					·
-					<a href="#">Packages</a>
+					<a href="#">Support 24/7</a>
 					·
 					<a href="about.php">About</a>
 					·
