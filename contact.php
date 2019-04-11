@@ -23,7 +23,7 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	>
+	
 	
 	<!-- links for newsletter -->
 	
@@ -44,18 +44,12 @@
 		<?php include 'templates/header.php' ?>
 		<?php include 'templates/subheader.php' ?>
 	</header>
-	<section>
-		<h1 class="section-title h1">Agency</h1>
-	</section>	
 	<!-- Login -->
 	<?php include 'login.php' ?>
 	<?php include 'signup.php' ?>
 
 	<main class="container">
-<<<<<<< HEAD
-		
-=======
-	<div class="row d-flex justify-content-center pb-70">
+	<div class="row d-flex justify-content-center section-gap">
 	<div class="menu-content col-lg-8">
 		<div class="title text-center">
 			<h1 class="mb-10">Travel Agencies</h1>
@@ -63,7 +57,6 @@
 		</div>
 	</div>
 	</div>
->>>>>>> e2a86a69d43152793dbc742f44e36b6c975113ac
 		<!-- agencies -->
 		<?php
 		include_once("models/connect.php");
