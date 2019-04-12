@@ -23,7 +23,7 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	
 	
 	<!-- links for newsletter -->
 	
@@ -35,8 +35,8 @@
 	<!-- team agents links -->
 	
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+
 </head>
 <body>
 	<?php $title = 'CONTACT US'; ?>
@@ -44,14 +44,19 @@
 		<?php include 'templates/header.php' ?>
 		<?php include 'templates/subheader.php' ?>
 	</header>
-	<section>
-
-	</section>	
 	<!-- Login -->
 	<?php include 'login.php' ?>
 	<?php include 'signup.php' ?>
 
 	<main class="container">
+	<div class="row d-flex justify-content-center section-gap">
+	<div class="menu-content col-lg-8">
+		<div class="title text-center">
+			<h1 class="mb-10">Travel Agencies</h1>
+			<p class="lightertext">Where Customers Come First</p>
+		</div>
+	</div>
+	</div>
 		<!-- agencies -->
 		<?php
 		include_once("models/connect.php");
@@ -60,14 +65,14 @@
 		?>
 		<div class="row">
 			<?php while( $record = mysqli_fetch_assoc($results) ) { ?>  
-				<div class="card" style="width: 45%;">
+				<div class="card card-content" style="width: 45%;">
 					<img class="card-img-top" src="<?php echo $record['AgcImg']; ?>" alt="Card image cap">
 					<div class="card-body">
 						<h3 class="card-title2"><?php echo $record['AgncyCity']; ?>, <?php echo $record['AgncyCountry']; ?></h3>
 						<p class="card-text">Office Address: <?php echo $record['AgncyAddress']; ?></p>
 						<p class="card-text">Phone: <?php echo $record['AgncyPhone']; ?></p>
 						<p class="card-text">Fax: <?php echo $record['AgncyFax']; ?></p>
-						<a href="https://bit.ly/2I9On86" class="btn btn-primary" id="show-option" title="click here for map location"><i class="icon-edit icon-white"><?php echo $record['AgncyCity']; ?></i></a>
+						<a href="https://bit.ly/2I9On86" class="btn btn-lg btn-primary" id="show-option" title="click here for map location"><i class="icon-edit icon-white"><?php echo $record['AgncyCity']; ?></i></a>
 						<!-- <a href="https://bit.ly/2I9On86" class="btn btn-primary" id="show-option" title="click here for map location"><i class="icon-edit icon-white">Okotoks Downtown Location</i></a> -->
 					</div>
 				</div>
@@ -90,7 +95,14 @@
 
 	<section id="team" class="pb-5">
 		<div class="container">
-			<h5 class="section-title h1">Travel Agent Team</h5>
+		<div class="row d-flex justify-content-center pb-70">
+		<div class="menu-content col-lg-8">
+			<div class="title text-center">
+				<h1 class="mb-10">Travel Agents</h1>
+				<p class="lightertext">Your Guides To Your Dream Getaway</p>
+			</div>
+		</div>
+		</div>
 			<div class="row">
 				<?php while( $record = mysqli_fetch_assoc($results) ){?>
 					<!-- Team member -->
@@ -202,7 +214,6 @@
 			<br>
 			<br>
 		</section>
-
 		<!-- email newsletter -->
 
 		<section class="subscribe-area pb-50 pt-70">

@@ -23,7 +23,9 @@
 				<p class="footer-links">
 					<a href="index.php">Home</a>
 					·
-					<a href="#">Packages</a>
+				
+					<a href="destinations.php">Packages</a>
+
 					·
 					<a href="about.php">About</a>
 					·

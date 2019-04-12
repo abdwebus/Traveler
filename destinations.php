@@ -49,9 +49,18 @@
 		}
 		?>
 	</div>
+	
 
 	<section class="details-card">
 		<div class="container">
+		<div class="row d-flex justify-content-center">
+		<div class="menu-content col-lg-8 pb-70">
+		<div class="title text-center">
+			<h1 class="mb-10">Current Packages</h1>
+			<p class="lightertext">Where Will You Choose To Explore</p>
+		</div>
+		</div>
+		</div>
 			<div class="row">
 
 				<?php
