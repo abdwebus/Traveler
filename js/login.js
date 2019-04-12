@@ -154,12 +154,9 @@ function showTab(n) {
 }
 
 /**
- * Summary.
+ * Handles the stepping forward or backward of the signup form.
  *
- * @param {type}	var 	Description
- * @param {type}	var 	Description
- *
- * @return {type}	Description
+ * @param {int}	n 	Indicator whether to move forward or backword
  */
 function nextPrev(n) {
 	var x = document.getElementsByClassName("tab");
@@ -194,12 +191,9 @@ function nextPrev(n) {
 }
 
 /**
- * Summary.
+ * Validate all form elemenmts.
  *
- * @param {type}	var 	Description
- * @param {type}	var 	Description
- *
- * @return {type}	Description
+ * It goes through all visible elements and calls appropriate validation functions
  */
 function validateForm() {
 	var x, y, i, valid = true, result = true;
@@ -265,12 +259,11 @@ function validateForm() {
 }
 
 /**
- * Summary.
+ * Checks whethre the email address has already been used.
  *
- * @param {type}	var 	Description
- * @param {type}	var 	Description
+ * @param {function} callback 	Callback function to execute when result is ready
  *
- * @return {type}	Description
+ * @return {bool}	Whether email is available
  */
 function validateEmailAvailability(callback){
 	var request = $.ajax({
@@ -284,11 +277,14 @@ function validateEmailAvailability(callback){
 
 	request.done(function(msg) {
 		email = document.getElementById('InputEmail');
+
 		if(msg === 'err'){
+			// Email is not available
 			document.getElementById('emailNotAvailable').style.display = 'block';
 			callback(false);
 		}
 		if(msg === 'success'){
+			// Email is available
 			document.getElementById('emailNotAvailable').style.display = 'none';
 			callback(true);	
 		}
@@ -300,12 +296,9 @@ function validateEmailAvailability(callback){
 }
 
 /**
- * Summary.
+ * Handles the step indicators.
  *
- * @param {type}	var 	Description
- * @param {type}	var 	Description
- *
- * @return {type}	Description
+ * @param {int}	n 	Indicator whether to move forward or backword
  */
 function fixStepIndicator(n) {
 	var i, x = document.getElementsByClassName("step");
