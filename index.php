@@ -40,13 +40,11 @@
 
 		<div class="container marketing section-gap">
 			<!-- Packages -->
-			<?php include 'templates/titletext.php' ?>
-			<hr class="featurette-divider">
 			<?php include 'templates/bestPackages.php' ?>
 		</div>
 
-		<div class="container marketing pb-70">
-			<!-- Packages -->
+		<div class="container marketing section-gap">
+			<!-- Testimonials -->
 			<?php include 'templates/testimonials.php' ?>
 		</div>
 

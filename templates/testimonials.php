@@ -1,18 +1,9 @@
-<div class="row d-flex justify-content-center">
-	<div class="menu-content col-lg-8">
-		<div class="title text-center">
-			<h1 class="mb-10">Customer Testimonials</h1>
-			<p class="lightertext">Our Customers Love Us! Read What They Have To Say Below</p>
-		</div>
-	</div>
-</div>
+<?php $titleheader = "Customer Testimonials"; ?>
+<?php $titledescription = "Our Customers Love Us! Read What They Have To Say Below"; ?>
+<?php include 'templates/titletext.php' ?>
 
 <div class="testimonials-clean">
     <div class="container">
-        <!-- <div class="intro">
-            <h2 class="text-center">Testimonials </h2>
-            <p class="text-center">Our customers love us! Read what they have to say below. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.</p>
-        </div> -->
         <div class="row people">
             <div class="col-md-6 col-lg-4 item">
                 <div class="box">

@@ -6,7 +6,6 @@
 	</ol>
 	<div class="carousel-inner">
 		<div class="carousel-item active min-vh-100">
-		<!-- <img src="https://bit.ly/2I0KDF2" alt="..."> -->
 		<img src="images/13585.jpg" alt="...">
 			<div class="container">
 				<div class="carousel-caption text-left">
@@ -17,7 +16,6 @@
 			</div>
 		</div>
 		<div class="carousel-item min-vh-100">
-			<!-- <img src="https://bit.ly/2YIry0r" alt="..."> -->
 			<img src="images/13589.jpg" alt="...">
 			<div class="container">
 				<div class="carousel-caption">
@@ -28,7 +26,6 @@
 			</div>
 		</div>
 		<div class="carousel-item min-vh-100">
-		<!-- <img src="https://bit.ly/2I0KDF2" alt="..."> -->
 		<img src="images/306372.jpg" alt="...">
 			<div class="container">
 				<div class="carousel-caption text-right">

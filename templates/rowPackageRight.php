@@ -1,4 +1,3 @@
-<!-- <hr class="featurette-divider"> -->
 <div class="row featurette">
 	<div class="col-md-7">
 		<h2 class="featurette-heading"><?php echo $row['PkgName'];  ?></h2>
@@ -8,4 +7,4 @@
 		<img class="frontpage bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="<?php echo $row['PkgImgUrl']; ?>" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false">
 	</div>
 </div>
-<hr class="featurette-divider">
+<!-- <hr class="featurette-divider"> -->
