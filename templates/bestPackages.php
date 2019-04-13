@@ -1,3 +1,7 @@
+<?php $titleheader = "Popular Destinations"; ?>
+<?php $titledescription = "Affordable Pacakages We Know You'll Love"; ?>
+<?php include 'templates/titletext.php' ?>
+
 <?php
 // Author: Abdulwahab Alansari
 
