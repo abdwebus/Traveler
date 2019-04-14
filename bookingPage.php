@@ -41,6 +41,9 @@ if(isset($_SESSION['customerID'])){
 			'PkgDesc' => $packageDetails['PkgDesc']
 		]);
 	}
+} else {
+	// User is not signed in
+	header('Location: index.php');
 }
 
 
