@@ -24,6 +24,14 @@ if (isset($_POST)){
 	}
 }
 
+/*
+* Gets user information from 'customers' table in db
+*
+* @param object $db: Database connection object
+* @param string $credentialID: User id in the 'credential' table
+*
+* @return associativeArray: User information in associative array
+*/
 function getUserInfo($db, $credentialID){
 	$sql = "SELECT * FROM customers WHERE credentialID = '$credentialID'";
 	$customerResult = mysqli_query($db, $sql);
@@ -31,10 +39,23 @@ function getUserInfo($db, $credentialID){
 	return $customerRow;
 }
 
+
+/*
+* Creates customer in the customers table
+*
+* @param object $db: Database connection object
+* @param dictionary $post: $_POST
+* @param string $credentialID: User id in the 'credential' table
+*
+* @return associativeArray: User information in associative array
+*/
 function createCustomer($db, $post, $credentialID){
 	$AGENTID = 20; //online agent
+
+	// Creates a customer object
 	$customer = createCustomerObject($post);
 
+	// Extract customer information
 	$firstName = $customer->getFirstName();
 	$lastName = $customer->getLastName();
 	$address = $customer->getAddress();
@@ -46,11 +67,12 @@ function createCustomer($db, $post, $credentialID){
 	$businessPhone = $customer->getBusinessPhone();
 	$email = $customer->getEmail();
 
-
+	// SQL statement to insert customer into customers table
 	$sql = "INSERT INTO customers 
 	(CustFirstName, CustLastName, CustAddress, CustCity, CustProv, CustPostal, CustCountry, CustHomePhone, CustBusPhone, CustEmail, AgentId, credentialID)
     VALUES ('$firstName', '$lastName', '$address', '$city', '$province', '$postal', '$country', '$homePhone', '$businessPhone', '$email', $AGENTID, $credentialID)";
 
+    // Execute database query
     if ($db->query($sql) === TRUE) {
    		echo 'Customer created';
    	} else {
@@ -77,6 +99,13 @@ function createCredential($db, $post){
    	}
 }
 
+/*
+* Helper function to create customer object from $_POST
+*
+* @param dictionary $post: $_POST
+*
+* @return Customer object: Customer object populated with all customer information
+*/
 function createCustomerObject($post){
 	$country = 'Canada';
 	$customer = new Customer();
@@ -93,6 +122,13 @@ function createCustomerObject($post){
 	return $customer;
 }
 
+/*
+* Validates $_POST
+*
+* @param dictionary $post: $_POST
+*
+* @return string: $response empty string when $_POST is valid
+*/
 function validatePost($post){
 	$response = '';
 	$response .= validateEmail($post['email']);
@@ -113,6 +149,13 @@ function validatePost($post){
 
 }
 
+/*
+* Validate email address
+*
+* @param string $string: Email address
+*
+* @return string: empty string when email is valid
+*/
 function validateEmail($string){
 	if($string == '') {return 'Email is required! </br>';}
 	if(!preg_match("/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/", $string)){
@@ -121,6 +164,14 @@ function validateEmail($string){
 	return '';
 }
 
+/*
+* Validate password
+*
+* @param string $password: password
+* @param string $confirmPassword: Confirm Password
+*
+* @return string: empty string when password is valid
+*/
 function validatePassword($password, $confirmPassword){
 	if($password === '' || $confirmPassword === ''){
 		return 'Password fields are required </br>';
@@ -132,6 +183,13 @@ function validatePassword($password, $confirmPassword){
 	return '';
 }
 
+/*
+* Validate business phone number
+*
+* @param string $string: Business phone number
+*
+* @return string: empty string when business phone number is valid
+*/
 function validateBusinessPhoneNumber($string){
 	if($string == '') {return 'Business Phone number is required </br>';}
 	if(!preg_match("/^\d{10}$/", $string)){
@@ -140,6 +198,13 @@ function validateBusinessPhoneNumber($string){
 	return '';
 }
 
+/*
+* Validate home phone number
+*
+* @param string $string: Home phone number
+*
+* @return string: empty string when home phone number is valid
+*/
 function validateHomePhoneNumber($string){
 	if($string == '') {return '';}
 	if(!preg_match("/^\d{10}$/", $string)){
@@ -148,6 +213,13 @@ function validateHomePhoneNumber($string){
 	return '';
 }
 
+/*
+* Validate whether the input contains only alpha characters
+*
+* @param string $string: The string to validate
+*
+* @return bool: Whether the input contains only alpha characters
+*/
 function isAlpha($string){
 	if(preg_match("/\d/", $string)){
 		return false;
@@ -155,6 +227,14 @@ function isAlpha($string){
 	return true;
 }
 
+
+/*
+* Validate zip code matches Canadian zip code format 
+*
+* @param string $string: Zip code
+*
+* @return string: empty string when zip code is valid
+*/
 function validateZipCode($string){
 	if($string == '') {return 'Zip code is required </br>';}
 	if(!preg_match("/^[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d$/", $string)){

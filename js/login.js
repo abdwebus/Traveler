@@ -16,23 +16,27 @@ document.getElementById('signupCloseButton').addEventListener('click', function(
 });
 
 /**
- * Summary.
- *
- * @param {type}	var 	Description
- * @param {type}	var 	Description
- *
- * @return {type}	Description
+ * Handles the login process.
+ * 
+ * Makes an ajax call
+ * On success, the page reload
+ * On failure, user is informed
  */
-function login(event){
+function login(){
 	email = document.getElementById('loginEmail');
 	password = document.getElementById('loginPassword');
+
+	// Validate email address
 	if(!validateEmail(email)){
 		return;
 	}
 
+	// Validate password
 	if(!hasContent(password)){
 		return;
 	}
+
+	// Create ajax call
 	var request = $.ajax({
 		url: 'model/loginModel.php',
 		type: "POST",
@@ -43,6 +47,7 @@ function login(event){
 		dataType: "html"
 	});
 
+	// Handle ajax call response
 	request.done(function(msg) {
 		password = document.getElementById('loginPassword');
 		email = document.getElementById('loginEmail');
@@ -57,6 +62,7 @@ function login(event){
 		}
 	});
 
+	// Handle ajax call failure
 	request.fail(function(jqXHR, textStatus) {
 		alert( "Request failed: " + textStatus );
 	});
@@ -129,24 +135,27 @@ function resetSignup() {
 }
 
 /**
- * Summary.
+ * Handle the logic of showing the right signup form step.
  *
- * @param {type}	var 	Description
- * @param {type}	var 	Description
+ * @param {int}	n 	Identifies whether to move forward or backward
  *
- * @return {type}	Description
  */
 function showTab(n) {
 	var x = document.getElementsByClassName("tab");
 	x[n].style.display = "block";
+
 	if (n == 0) {
+		// Hide previous button since this is the first step
 		document.getElementById("prevBtn").style.display = "none";
 	} else {
+		// Show the previous button
 		document.getElementById("prevBtn").style.display = "inline";
 	}
 	if (n == (x.length - 1)) {
+		// Show submit button since this is the last step
 		document.getElementById("nextBtn").innerHTML = "Submit";
 	} else {
+		// Show Next button since this is not the last step
 		document.getElementById("nextBtn").innerHTML = "Next";
 	}
 	// ... and run a function that displays the correct step indicator:

@@ -26,6 +26,7 @@ if(isset($_SESSION['customerID'])){
 	$customerID = $_SESSION['customerID'];
 
 	// Create DB connection
+	// Get all bookings associated with the customerID
 	include 'model/dbConnection.php';
 	$sql = "SELECT * FROM bookings WHERE CustomerId = '$customerID'";
 	$bookingResults = mysqli_query($connect, $sql);
@@ -47,6 +48,14 @@ if(isset($_SESSION['customerID'])){
 }
 
 
+/*
+* Gets package information from 'packages' table in db
+*
+* @param object $db: Database connection object
+* @param string $packageID: The package id in the packages table
+*
+* @return associativeArray: Package information in associative array
+*/
 function getPackageInfo($db, $packageID){
 	$sql = "SELECT * FROM packages WHERE PackageId = '$packageID'";
 	$packageResults = mysqli_query($db, $sql);

@@ -1,3 +1,4 @@
+// Author: Ariel
 $(document).ready(function() {
     $(".menu-icon").on("click", function() {
           $("nav ul").toggleClass("showing");
@@ -6,8 +7,8 @@ $(document).ready(function() {
 
 });
 
+// Author: Ariel
 // Scrolling Effect
-
 $(window).on("scroll", function() {
     if($(window).scrollTop()) {
           $('nav').addClass('black');
@@ -18,10 +19,10 @@ $(window).on("scroll", function() {
     }
 })
 
-
+// Author: Abdulwahab Alansri
+// Handle the deletion of bookings
+// Makes an ajax call
 function deleteBooking(bookingID){
-   	console.log(bookingID);
-
    	var request = $.ajax({
 		url: 'bookingPage.php',
 		type: "POST",
