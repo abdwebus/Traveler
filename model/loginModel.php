@@ -22,11 +22,11 @@ if(isset($_POST)){
             echo "success";
 
             // Start session and assign required values
-			session_Start();
+			if(!isset($_SESSION)){session_Start();}
     		$_SESSION['userid'] = $row['userID'];
     		$_SESSION['userRole'] = $row['type'];
     		$_SESSION['userName'] = $userInfo['CustFirstName'];
-			// header('Location: ../index.php');
+            $_SESSION['customerID'] = $userInfo['CustomerId'];
     	} else {
             // Return err if password is incorrect
     		echo "err";

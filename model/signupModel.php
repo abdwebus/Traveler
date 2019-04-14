@@ -14,10 +14,11 @@ if (isset($_POST)){
 		createCustomer($connect, $_POST, $credentialID);
 		$customerInfo = getUserInfo($connect, $credentialID);
 		mysqli_close($connect);
-		session_Start();
+		if(!isset($_SESSION)){session_Start();}
 		$_SESSION['userid'] = $credentialID;
 		$_SESSION['userName'] = $customerInfo['CustFirstName'];
 		$_SESSION['userRole'] = 'customer';
+		$_SESSION['customerID'] = $userInfo['CustomerId'];
 		header('Location: ../index.php');
 		exit;
 	}

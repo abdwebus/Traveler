@@ -1,5 +1,56 @@
 <?php 
 	// Author: Abdulwahab Alansari
+
+// Handle ajax call to delete bookings
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+	if(isset($_POST['bookingID'])){
+		$bookingID = $_POST['bookingID'];
+		include 'model/dbConnection.php';
+		$sql = "DELETE FROM bookings WHERE BookingId='$bookingID'";
+		if ($connect->query($sql) === TRUE) {
+			echo "success";
+		} else {
+			echo "Error deleting record: " . $conn->error;
+		}
+	}
+	exit;
+}
+
+if(!isset($_SESSION)){session_Start();}
+
+// Create global variable to use when bookings available
+$bookings = NULL;
+
+// Proceed only when customer is signed in
+if(isset($_SESSION['customerID'])){
+	$customerID = $_SESSION['customerID'];
+
+	// Create DB connection
+	include 'model/dbConnection.php';
+	$sql = "SELECT * FROM bookings WHERE CustomerId = '$customerID'";
+	$bookingResults = mysqli_query($connect, $sql);
+	while ($bookingRow = mysqli_fetch_assoc($bookingResults)){
+		if(!isset($bookings)){$bookings = [];}
+		$packageDetails = getPackageInfo($connect, $bookingRow['PackageId']);
+		array_push($bookings, [
+			'BookingId' => $bookingRow['BookingId'], 
+			'BookingNo' => $bookingRow['BookingNo'],
+			'BookingDate' => $bookingRow['BookingDate'],
+			'PkgName' => $packageDetails['PkgName'],
+			'PkgBasePrice' => $packageDetails['PkgBasePrice'],
+			'PkgDesc' => $packageDetails['PkgDesc']
+		]);
+	}
+}
+
+
+function getPackageInfo($db, $packageID){
+	$sql = "SELECT * FROM packages WHERE PackageId = '$packageID'";
+	$packageResults = mysqli_query($db, $sql);
+	$packageRow = mysqli_fetch_assoc($packageResults);
+	return $packageRow;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,24 +111,46 @@
 		<main role="main" class="inner cover marginAround">
 			<h1 class="cover-heading">Control all your bookings in one place</h1>
 			<hr class="featurette-divider">
-			<div class="card text-left top-margin">
-				<div class="card-header">
-					Featured
-				</div>
-				<div class="card-body">
-					<h5 class="card-title">Special title treatment</h5>
-					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-					<a href="#" class="btn btn-danger">Cancel booking</a>
-				</div>
-			</div>
-		</main>
+			<?php 
+			if(isset($bookings)){
+				foreach ($bookings as $value){ ?>
+					<div class="card text-left top-margin">
+						<div class="card-header">
+							<div class="float-left">
+								<h4 class="text-secondary font-italic"><?php echo $value['BookingDate']; ?> </h4>	
+							</div>
+							<div class="float-right">
+								<h5 class="text-success">Booking No. <?php echo $value['BookingNo']; ?> </h5>
+							</div>
 
-		<!-- FOOTER -->
-		<?php include 'templates/footer.php' ?>
-	</div>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script src="js/app.js"></script>
-</body>
-</html>
+						</div>
+						<div class="card-body">
+							<h4 class="card-title text-uppercase"><?php echo $value['PkgName']; ?></h4>
+							<p class="card-text"><?php echo $value['PkgDesc']; ?></p>
+							<button onclick="deleteBooking(<?php echo $value['BookingId']; ?>)" class="btn btn-danger">Cancel booking</button>
+						</div>
+						<div class="card-footer text-muted">
+							CAD<?php echo $value['PkgBasePrice']; ?>
+						</div>
+					</div>
+				<?php }} else { ?>
+					<h4 class="text-secondary font-italic">You don't have bookings yet.</h4>
+				<?php } ?>
+			</main>
+
+			<!-- FOOTER -->
+			<?php include 'templates/footer.php' ?>
+		</div>
+
+		<!-- Bootstrap JS -->
+		<script
+		src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<!-- App JS -->
+		<script src="js/app.js"></script>
+	</body>
+	</html>

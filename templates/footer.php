@@ -1,6 +1,6 @@
 
 
-</footer>  
+
 	
 	<link rel="stylesheet" href="css/styleliam.css">
 	
