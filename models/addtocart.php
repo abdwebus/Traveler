@@ -1,15 +1,22 @@
+<!-- Author: Ariel Contreras -->
+<!-- Add to cart functionality  -->
 <?php
 	if (session_status() == PHP_SESSION_NONE) {
 		session_start();
 	}
-	if(isset($_GET['id']) & !empty($_GET['id'])){
+	if(isset($_GET['id']) && !empty($_GET['id'])){
+		if(isset($_SESSION['userid']) & !empty($_SESSION['userid'])){
+		
 			$items = $_GET['id'];
 			$_SESSION['cart'] = $items;
-			header('location: destinations.php?status=success');
+			header('location: ../destinations.php?status=success');
 	}else{
-		header('location: destinations.php?status=failed');
+		header('location: ../destinations.php?status=failed');
 	}
- 
+}
+	
+	// Add to cart function for multiple pacakages
+
 	// if(isset($_GET['id']) && !empty($_GET['id'])){
 	// 	if(isset($_SESSION['cart']) & !empty($_SESSION['cart'])){
  

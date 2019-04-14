@@ -1,3 +1,5 @@
+<!-- Author: Ariel Contreras -->
+<!-- Insert travel packages into DB -->
 <?php
     include 'connect.php';
     include 'packagesclass.php';

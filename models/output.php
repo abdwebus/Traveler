@@ -1,3 +1,5 @@
+<!-- Author: Ariel Contreras -->
+<!-- Display package entry details from DB -->
 <html>
     <head>
         <title>SQL Query Results</title>

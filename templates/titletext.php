@@ -1,3 +1,4 @@
+<!-- Author: Ariel Contreras -->
 <div class="row d-flex justify-content-center">
 	<div class="menu-content col-lg-8 pb-70">
 		<div class="title text-center">

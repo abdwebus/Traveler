@@ -1,3 +1,5 @@
+<!-- Author: Ariel Contreras -->
+<!-- Establish connection to DB -->
 <?php
 
     $servername = "remotemysql.com";

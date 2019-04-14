@@ -1,3 +1,5 @@
+<!-- Author: Ariel Contreras -->
+<!-- Insert checkout details into DB -->
 <?php
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
