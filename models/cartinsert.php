@@ -9,10 +9,10 @@
     $randomString = substr(str_shuffle(md5(time())),0,$length);
    
 
-    $BookingDate = date("Y-m-d H:i:s");
+    $BookingDate = date("Y-m-d");
     $BookingNo = $randomString;
-    $TravelerCount = 2;
-    $CustomerId = $_SESSION['userid'];
+    $TravelerCount = 1;
+    $CustomerId = $_SESSION['customerID'];
     $TripTypeId = "L";
     $PackageId = $_SESSION['cart'];
     var_dump($BookingDate, $BookingNo, $TravelerCount, $CustomerId, $TripTypeId, $PackageId);
@@ -23,5 +23,5 @@
     } else {
         echo "Error creating new entry";
     }
-
+    header('location: ../bookingPage.php');
 ?>

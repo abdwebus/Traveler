@@ -9,9 +9,9 @@ var_dump($cartitems, $items);
 if(isset($_GET['remove']) && !empty($_GET['remove'])){
 	$delitem = $_GET['remove'];
 	unset($cartitems[$delitem]);
-	$itemids = implode(",", $cartitems);
+	// $itemids = implode(",", $cartitems);
 	$_SESSION['cart'] = $itemids;
 }
-header('location:cart.php');
+// header('location:cart.php');
 
 ?>
