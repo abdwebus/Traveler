@@ -75,7 +75,11 @@
 								<p><?php echo $record['PkgDesc']; ?></p>
 								<p class="startDate"><?php echo $record['PkgStartDate']; ?></p>
 								<p><?php echo $record['PkgEndDate']; ?></p>
-								<a href="addtocart.php?id=<?php echo $record['PackageId']; ?>" class="btn btn-primary" role="button">Add to Cart</a>  
+								<?php if(isset($_SESSION['userid'])){ ?>
+									<a href="addtocart.php?id=<?php echo $record['PackageId']; ?>" class="btn btn-primary" role="button">Add to Cart</a>
+								<?php } else { ?>
+									<button onclick="alert('Please login in order to make purchases');" class="btn btn-primary" role="button">Add to Cart</button>  
+								<?php } ?>
 							</div>
 						</div>
 					</div>
