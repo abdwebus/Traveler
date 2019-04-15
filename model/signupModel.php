@@ -18,7 +18,7 @@ if (isset($_POST)){
 		$_SESSION['userid'] = $credentialID;
 		$_SESSION['userName'] = $customerInfo['CustFirstName'];
 		$_SESSION['userRole'] = 'customer';
-		$_SESSION['customerID'] = $userInfo['CustomerId'];
+		$_SESSION['customerID'] = $customerInfo['CustomerId'];
 		header('Location: ../index.php');
 		exit;
 	}
