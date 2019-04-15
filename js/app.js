@@ -1,4 +1,15 @@
 // Author: Ariel Contreras
+// Destinations page date strikethrough
+var today = new Date(Date.now());
+var datestrike = document.getElementsByClassName("startDate");
+
+for(i = 0; i < datestrike.length; i++) {
+	var startDate = new Date (document.getElementsByClassName("startDate")[i].innerText);
+	console.log(startDate);
+	if(startDate>today) {
+	datestrike[i].style.cssText = "text-decoration: line-through red";
+	}
+}
 // Toggle responsive nav list
 $(document).ready(function() {
     $(".menu-icon").on("click", function() {
