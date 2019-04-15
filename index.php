@@ -32,7 +32,6 @@
 		<!-- Carousel -->
 		<?php include 'templates/carousel.php' ?>
 
-
 		<div class="container marketing section-gap">
 			<!-- Services -->
 			<?php include 'templates/services.php' ?>

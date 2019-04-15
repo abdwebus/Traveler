@@ -1,3 +1,5 @@
+<!-- Author: Ariel Contreras -->
+<!-- OOP model for packages -->
 <?php 
 
 	class package{

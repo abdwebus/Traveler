@@ -38,26 +38,23 @@
 	$results = mysqli_query($connect, $query) or die("database error:". mysqli_error($connect));
 	?>
 
-	<div class="container">
-		<?php if(isset($_GET['status']) & !empty($_GET['status'])){ 
-			if($_GET['status'] == 'success'){
-				echo "<div class=\"alert alert-success\" role=\"alert\">Item Successfully Added to Cart</div>";
-			}elseif ($_GET['status'] == 'incart') {
-				echo "<div class=\"alert alert-info\" role=\"alert\">Item Already Exists in Cart</div>";
-			}elseif ($_GET['status'] == 'failed') {
-				echo "<div class=\"alert alert-danger\" role=\"alert\">Failed to Add item, try to Add Again</div>";
-			}
-		}
-		?>
-	</div>
-	
-
 	<section class="details-card">
 		<div class="container">
 
 		<?php $titleheader = "Popular Destinations"; ?>
     	<?php $titledescription = "Affordable Pacakages We Know You'll Love"; ?>
 		<?php include 'templates/titletext.php' ?>
+		
+		<?php if(isset($_GET['status']) & !empty($_GET['status'])){ 
+			if($_GET['status'] == 'success'){
+				echo "<div class=\"alert alert-success\" role=\"alert\">Item Successfully Added to Cart:</BR> LIMIT One Package Per Booking</div>";
+			}elseif ($_GET['status'] == 'incart') {
+				echo "<div class=\"alert alert-info\" role=\"alert\">Item Already Exists in Cart</div>";
+			}elseif ($_GET['status'] == 'failed') {
+				echo "<div class=\"alert alert-danger\" role=\"alert\">Failed to Add item, Please Login</div>";
+			}
+		}
+		?>
 			
       		<div class="row">
 
@@ -76,7 +73,7 @@
 								<p class="startDate"><?php echo $record['PkgStartDate']; ?></p>
 								<p><?php echo $record['PkgEndDate']; ?></p>
 								<?php if(isset($_SESSION['userid'])){ ?>
-									<a href="addtocart.php?id=<?php echo $record['PackageId']; ?>" class="btn btn-primary" role="button">Add to Cart</a>
+									<a href="models/addtocart.php?id=<?php echo $record['PackageId']; ?>" class="btn btn-primary" role="button">Add to Cart</a>
 								<?php } else { ?>
 									<button onclick="alert('Please login in order to make purchases');" class="btn btn-primary" role="button">Add to Cart</button>  
 								<?php } ?>

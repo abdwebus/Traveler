@@ -37,7 +37,13 @@
     }
 	?>
     
-    <div class="container">
+    <div class="section-gap details-card">
+        <div class="container">
+
+        <?php $titleheader = "Package Checkout"; ?>
+    	<?php $titledescription = "Start Packing Your Bags"; ?>
+		<?php include 'templates/titletext.php' ?>
+
         <div class="card shopping-cart">
             <div class="card-header bg-dark text-light">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -98,6 +104,7 @@
                 </div>
             </div>
         </div>
+    </div>
 
     <!-- FOOTER -->
     <?php include 'templates/footer.php' ?>

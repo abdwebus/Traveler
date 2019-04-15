@@ -1,3 +1,4 @@
+<!-- Author: Ariel Contreras -->
 <?php $titleheader = "Customer Testimonials"; ?>
 <?php $titledescription = "Our Customers Love Us! Read What They Have To Say Below"; ?>
 <?php include 'templates/titletext.php' ?>

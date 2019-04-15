@@ -1,4 +1,5 @@
-// Author: Ariel
+// Author: Ariel Contreras
+// Toggle responsive nav list
 $(document).ready(function() {
     $(".menu-icon").on("click", function() {
           $("nav ul").toggleClass("showing");
@@ -7,7 +8,7 @@ $(document).ready(function() {
 
 });
 
-// Author: Ariel
+// Author: Ariel Contreras
 // Scrolling Effect
 $(window).on("scroll", function() {
     if($(window).scrollTop()) {
